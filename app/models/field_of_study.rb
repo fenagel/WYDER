@@ -1,0 +1,2 @@
+class FieldOfStudy < ApplicationRecord
+end
