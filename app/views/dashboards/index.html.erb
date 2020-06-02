@@ -1,0 +1,64 @@
+<div class="container">
+  <div style="text-align: center; background-color: seashell">
+    <h1>Welcome to your Dashboard <%= @user.email %> !</h1>
+  </div>
+      <div class="col-sm-12 col-md-6 pt-5">
+        <h3>
+          <% if @user.bookmarks.count == 0 %>
+            <%= "You don't have any bookmarked videos 😦" %>
+          <% elsif @bookmarks.count == 1 %>
+            <%= "You have 1 bookmarked video 📹" %>
+          <% else @user.bookmarks.count %>
+            <%= "You have #{@user.bookmarks.count} bookmarked videos 📹" %>
+          <% end %>
+        </h3>
+      </div>
+      <div style="display: flex; justify-content: space-around;">
+        <div class="allvideos" style="background-color: seashell">
+
+        </div>
+        <div class="filters">
+          <div class="btn-group">
+
+            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Subject
+            </button>
+            <div class="dropdown-menu">
+              <% @subjects.each do |s| %>
+                <a class="dropdown-item" href="#"> <%= s.name %></a>
+              <% end %>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All subjects</a>
+            </div>
+
+            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              University
+            </button>
+            <div class="dropdown-menu">
+              <% @subjects.each do |s| %>
+                <a class="dropdown-item" href="#"> <%= s.name %></a>
+              <% end %>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All subjects</a>
+            </div>
+            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Program
+            </button>
+            <div class="dropdown-menu">
+              <% @programs.each do |p| %>
+                <a class="dropdown-item" href="#"> <%= p.name %></a>
+              <% end %>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All subjects</a>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
+
+<!--   <div class="filter buttons pt-5" style="display: flex; justify-content: space-around;">
+    <%= link_to "Programs", dashboards_path, class: "btn btn-primary"  %>
+    <%= link_to "Universities", dashboards_path, class: "btn btn-primary"  %>
+    <%= link_to "Subjects", dashboards_path, class: "btn btn-primary"  %>
+  </div> -->
+
