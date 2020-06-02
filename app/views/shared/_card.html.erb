@@ -1,0 +1,27 @@
+<div class="card-program-1">
+  <div class="card-program-1-image" style="background-image: url(https://source.unsplash.com/random)">
+    <i class="fas fa-play-circle position-icon"></i>
+  </div>
+  <div class="card-program-1-infos">
+    <% programs.each do |program| %>
+    <h2><%= program.university.name %></h2>
+    <h3><%= program.name %></h3>
+    <p><%= program.description %></p>
+    <% end %>
+  </div>
+</div>
+<br>
+<br>
+
+<div class="card-program-2">
+  <img src="https://source.unsplash.com/640x427/?universities" />
+  <div class="card-program-2-infos">
+    <div>
+      <% programs.each do |program| %>
+      <h2><%= program.university.name %></h2>
+      <h3><%= program.name %></h3>
+      <p><%= program.description %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
