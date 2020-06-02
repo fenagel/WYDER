@@ -1,29 +1,30 @@
 class ProgramsController < ApplicationController
-  def index
+  before_action :set_program, only: [:show, :edit, :update, :destroy]
 
+  def index
   end
 
   def show
-
   end
 
   def new
-
   end
 
   def create
-
   end
 
   def edit
-
   end
 
   def update
-
   end
 
   def destroy
+  end
 
+  private
+
+  def set_program
+    @program = Program.find(params[:id])
   end
 end

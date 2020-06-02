@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   belongs_to :university, optional: true
+  has_many :bookmarks, dependent: :destroy
 end
