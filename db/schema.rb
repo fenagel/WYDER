@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_01_153020) do
+ActiveRecord::Schema.define(version: 2020_06_01_152709) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,24 +24,25 @@ ActiveRecord::Schema.define(version: 2020_06_01_153020) do
     t.index ["user_id"], name: "index_bookmarks_on_user_id"
   end
 
-  create_table "field_of_studies", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "programs", force: :cascade do |t|
+    t.string "name"
     t.integer "degree"
     t.integer "fee"
     t.text "requirements"
     t.text "description"
     t.string "video_url"
     t.bigint "university_id", null: false
-    t.bigint "field_of_study_id", null: false
+    t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["field_of_study_id"], name: "index_programs_on_field_of_study_id"
+    t.index ["subject_id"], name: "index_programs_on_subject_id"
     t.index ["university_id"], name: "index_programs_on_university_id"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "universities", force: :cascade do |t|
@@ -54,10 +55,10 @@ ActiveRecord::Schema.define(version: 2020_06_01_153020) do
 
   create_table "university_subjects", force: :cascade do |t|
     t.bigint "university_id", null: false
-    t.bigint "field_of_study_id", null: false
+    t.bigint "subject_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["field_of_study_id"], name: "index_university_subjects_on_field_of_study_id"
+    t.index ["subject_id"], name: "index_university_subjects_on_subject_id"
     t.index ["university_id"], name: "index_university_subjects_on_university_id"
   end
 
@@ -67,10 +68,9 @@ ActiveRecord::Schema.define(version: 2020_06_01_153020) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.bigint "university_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "name"
-    t.bigint "university_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["university_id"], name: "index_users_on_university_id"
@@ -78,8 +78,9 @@ ActiveRecord::Schema.define(version: 2020_06_01_153020) do
 
   add_foreign_key "bookmarks", "programs"
   add_foreign_key "bookmarks", "users"
-  add_foreign_key "programs", "field_of_studies"
+  add_foreign_key "programs", "subjects"
   add_foreign_key "programs", "universities"
-  add_foreign_key "university_subjects", "field_of_studies"
+  add_foreign_key "university_subjects", "subjects"
   add_foreign_key "university_subjects", "universities"
+  add_foreign_key "users", "universities"
 end

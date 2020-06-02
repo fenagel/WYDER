@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   belongs_to :university, optional: true
   has_many :bookmarks, dependent: :destroy
+  has_many :programs, through: :bookmarks
 end
