@@ -5,5 +5,4 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:create, :destroy]
   end
   resources :dashboards, only: :index
-
 end
