@@ -1,20 +1,24 @@
-<div class="col-12">
-  <h1>University TU-Munich</h1>
-    <iframe width="1120" height="630" src="https://www.youtube.com/embed/Y82CAzKf2eg?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="row">
-  <div class="col-6">
-   <h2>Computer Science</h2>
-   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+<div class="container">
+  <div class="row">
+    <h1 id="headline">University TU-Munich</h1>
+          <a href="https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/" target="_blank">Apply now...</a>
+      <iframe width="1120" height="630" src="https://www.youtube.com/embed/Y82CAzKf2eg?start=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
-  <div style="display: flex;">
-    <div class="col">
-      <h2>
-        <a href="https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/" target="_blank">Check it out...</a>
-      </h2>
+  <div class="row">
+    <div class="col-6">
+     <h2>Computer Science</h2>
+     <p>Computational Science and Engineering (CSE) is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone.</p>
     </div>
-      <svg class="bi bi-bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
-      </svg>
+
+      <!-- bookmark-button -> unmarked -->
+      <div class="bookmark-container">
+        <svg class="bi bi-bookmark bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
+        </svg>
+            <!-- bookmark-button -> marked -->
+        <svg class="bi bi-bookmark-fill hidden bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
+        </svg>
+      </div>
   </div>
 </div>

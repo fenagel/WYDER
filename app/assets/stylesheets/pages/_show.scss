@@ -1,4 +1,18 @@
-h1 {
+#headline {
   text-align: center;
   padding: 30px;
+}
+
+h2 {
+  padding: 30px;
+}
+
+.bookmark-container {
+  position: relative;
+  svg {
+    position: absolute;
+  }
+  svg.hidden {
+    display: none;
+  }
 }
