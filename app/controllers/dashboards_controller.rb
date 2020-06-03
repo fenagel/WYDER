@@ -3,8 +3,13 @@ class DashboardsController < ApplicationController
     @user = current_user
     @bookmarks = Bookmark.all
     @programs = Program.all
-    @programs = @user.programs
     @subjects = Subject.all
     @universities = University.all
+
+    if params[:query].present?
+      @bookmarks = Program.where(subject: Subject.find_by(name: params[:subject_name]))
+    else
+      @bookmarks = Bookmark.all
+    end
   end
 end

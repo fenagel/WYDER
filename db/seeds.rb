@@ -49,7 +49,6 @@ user.programs << Program.find_by(name: "English")
 user.programs << Program.find_by(name: "Business Administration")
 user.programs << Program.find_by(name: "Law")
 
-
 user1 = User.create!(email: "alex@example.com", password: "123456")
 uni1 = University.create!(name: "WWU - Münster", location: "Münster", kind: :publicly_owned)
 user1.update(university: uni1)

@@ -14,26 +14,40 @@
         </h3>
       </div>
       <div>
+
+        <!-- FILTERS DIV (The bottom filters are just random subjects/programs from user bookmarks) -->
         <div class="filter-div" style="display: flex; justify-content: space-between; justify-content: center;">
+          <h4 id="filter-text">Filter by:</h4>
           <div class="btn-group">
 
             <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Subject
             </button>
             <div class="dropdown-menu">
-              <% @subjects.each do |s| %>
-                <a class="dropdown-item" href="#"> <%= s.name %></a>
+              <% @programs.each do |s| %>
+                <a class="dropdown-item" href="#"><%= s.subject.name %></a>
               <% end %>
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">All subjects</a>
             </div>
 
             <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              University
+            </button>
+            <div class="dropdown-menu">
+              <% @user.bookmarks.each do |b| %>
+                <a class="dropdown-item" href="#"><%= b.program.university.name %></a>
+              <% end %>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All subjects</a>
+            </div>
+
+            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown">
               Program
             </button>
             <div class="dropdown-menu">
               <% @programs.each do |p| %>
-                <a class="dropdown-item" href="#"> <%= p.name %></a>
+                <a class="dropdown-item" href="#"><%= p.subject.name %></a>
               <% end %>
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">All subjects</a>
@@ -43,24 +57,29 @@
 
         <div class="user-filter" style="display: flex; justify-content: space-around">
           <div class="btn-group">
-            <% if @programs.count > 0 %>
-              <button type="button" class="btn btn-primary p-3 m-3"><%= @programs.sample.name  %></button>
+            <% if @user.programs.count > 0 %>
+              <%= link_to @user.programs.first.subject.name, dashboards_path, class: "btn"%>
+              <%=  %>
             <% end %>
-            <% if @programs.count > 0 %>
-              <button type="button" class="btn btn-primary p-3 m-3"><%= @programs.sample.name  %></button>
+            <% if @user.programs.count > 1 %>
+              <%= link_to @user.programs.last.subject.name, dashboards_path, class: "btn" %>
+            <% end %>
+            <% if @user.programs.count > 2 %>
+              <%= link_to @user.programs.second.subject.name, dashboards_path, class: "btn" %>
             <% end %>
           </div>
         </div>
 
+        <!-- Div for all the videos/filtered if click on buttons -->
+
         <div class="all-videos">
-          <%= @bookmarks.all %>
+          <% @user.bookmarks.each do |b| %>
+           <div class="card-program-1">
+             <%= b.program.name %>
+           </div>
+          <% end %>
         </div>
       </div>
 </div>
 
-<!--   <div class="filter buttons pt-5" style="display: flex; justify-content: space-around;">
-    <%= link_to "Programs", dashboards_path, class: "btn btn-primary"  %>
-    <%= link_to "Universities", dashboards_path, class: "btn btn-primary"  %>
-    <%= link_to "Subjects", dashboards_path, class: "btn btn-primary"  %>
-  </div> -->
 

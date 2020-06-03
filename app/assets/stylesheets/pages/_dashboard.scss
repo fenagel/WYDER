@@ -12,6 +12,13 @@
   background-color: $apricot;
 }
 
+#filter-text {
+  position: absolute;
+  left: 100px;
+
+
+}
+
 .all-videos {
   background-color: $seashell;
   margin-top: 20px;
@@ -23,4 +30,7 @@
 }
 
 .btn {
+  background-color: $dark-apricot;
+  padding: 20px;
+  margin: 20px;
 }
