@@ -2,10 +2,21 @@ class ProgramsController < ApplicationController
   before_action :set_program, only: [:show, :edit, :update, :destroy]
 
   def index
-    if params[:query].present?
-      @programs = Program.where(location: params[:query])
-    else
-      @programs = Program.all
+    @programs = Program.all
+
+    if params[:name].present?
+      @programs = @programs.where(name: params[:name])
+    end
+
+    if params[:degree].present?
+      @programs = @programs.where(degree: params[:degree])
+    end
+
+    if params[:location].present?
+            sql_query = " \
+        universities.location @@ :query \
+      "
+      @programs = @programs.joins(:university).where(sql_query, query: "%#{params[:location]}%")
     end
   end
 
