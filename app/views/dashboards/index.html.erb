@@ -32,11 +32,22 @@
             </div>
 
             <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              University
+            </button>
+            <div class="dropdown-menu">
+              <% @user.bookmarks.each do |b| %>
+                <a class="dropdown-item" href="#"><%= b.program.university.name %></a>
+              <% end %>
+            <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">All subjects</a>
+            </div>
+
+            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown">
               Program
             </button>
             <div class="dropdown-menu">
               <% @programs.each do |p| %>
-                <a class="dropdown-item" href="#"> <%= p.subject.name %></a>
+                <a class="dropdown-item" href="#"><%= p.subject.name %></a>
               <% end %>
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">All subjects</a>
@@ -47,8 +58,8 @@
         <div class="user-filter" style="display: flex; justify-content: space-around">
           <div class="btn-group">
             <% if @user.programs.count > 0 %>
-              <!-- @subject_programs = @all_programs.where(subject: Subject.find_by(name: params[:subject_name]) -->
-              <%= link_to @user.programs.first.subject.name, dashboards_path, class: "btn" %>
+              <%= link_to @user.programs.first.subject.name, dashboards_path, class: "btn"%>
+              <%=  %>
             <% end %>
             <% if @user.programs.count > 1 %>
               <%= link_to @user.programs.last.subject.name, dashboards_path, class: "btn" %>
