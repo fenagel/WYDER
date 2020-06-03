@@ -1,34 +1,17 @@
-<%= link_to @program do %>
-  <div class="card-program-1">
-    <div class="card-program-1-image">
-      <%= image_tag "https://source.unsplash.com/640x427/?universities", alt: "uni-thumbnail" %>
-      <i class="fas fa-play-circle position-icon"></i>
-    </div>
-    <div class="card-program-1-infos">
-      <% programs.each do |program| %>
-      <h2><%= program.university.name %></h2>
-      <h3><%= program.name %></h3>
-      <p><%= program.description %></p>
-      <% end %>
-    </div>
-  </div>
-<% end %>
-<br>
-<br>
-<%= link_to @program do %>
-  <div class="card-program-2">
-    <div class="card-program-2-image">
-      <%= image_tag "https://source.unsplash.com/640x427/?universities", alt: "uni-thumbnail" %>
-      <i class="fas fa-play-circle position-icon"></i>
-    </div>
-    <div class="card-program-2-infos">
-      <div>
-        <% programs.each do |program| %>
+<% programs.each do |program| %>
+  <%= link_to program do %>
+    <div class="card-program-1 mb-5">
+      <div class="card-program-1-image">
+        <%= image_tag "https://source.unsplash.com/640x427/?universities", alt: "uni-thumbnail" %>
+        <i class="fas fa-play-circle position-icon"></i>
+      </div>
+      <div class="card-program-1-infos">
         <h2><%= program.university.name %></h2>
         <h3><%= program.name %></h3>
+        <h3><%= program.degree %></h3>
+        <h3><%= program.university.location %></h3>
         <p><%= program.description %></p>
-        <% end %>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>

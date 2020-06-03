@@ -32,5 +32,15 @@ import { loadDynamicBannerText } from '../components/banner';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  loadDynamicBannerText();
+  if (document.querySelector('.headline') != undefined) {
+    loadDynamicBannerText();
+  }
 });
+
+if (document.querySelector('.bookmark-container') != undefined) {
+  document.querySelector('.bookmark-container').addEventListener('click',() => {
+    document.querySelectorAll('.bookmark').forEach((bookmark) => {
+      bookmark.classList.toggle('hidden')
+    });
+  });
+};

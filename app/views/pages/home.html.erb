@@ -1,20 +1,35 @@
 <div class="container1">
-  <div class="start">
-    <div class="headline">
-      <h1 style="color: white;">WYDER</h1>
-      <p>
+  <div class="start" style="padding-top: 95px;">
+    <div class="headline" style="padding-top: 157px;">
+      <h1 style="color: white; font-size: 70px;">Our Mission</h1>
+      <h3 style="color: white;">
         <span id="banner-typed-text"></span>
-      </p>
+      </h3>
     </div>
-    <div class="search">
-      <h2>Where do you want to study?</h2>
+    <div class="search" style="padding-left: 180px;">
+      <h2 style="padding: 20px;">What do you want to study?</h2>
       <%= form_tag programs_path, method: :get do %>
-      <%= text_field_tag :query,
-      params[:query],
+      <%= text_field_tag :name,
+      params[:name],
       class: "form-control",
-      placeholder: "Location"
+      placeholder: "e.g. Computer Science"
         %>
-      <%= submit_tag "Search", class: "btn btn-info"%>
+      <h2 style="padding: 20px;">What degree do you want to have?</h2>
+      <%= text_field_tag :degree,
+      params[:degree],
+      class: "form-control",
+      placeholder: "e.g. msc"
+        %>
+      <h2 style="padding: 20px;">Where do you want to study?</h2>
+      <%= text_field_tag :location,
+      params[:location],
+      class: "form-control",
+      placeholder: "e.g. Oxford"
+        %>
+      <div style="padding-top:40px; display: flex; justify-content: space-around;">
+        <%= submit_tag "Search", class: "btn btn-info"%>
+        <%= submit_tag "Browse", class: "btn btn-info"%>
+      </div>
       <% end %>
     </div>
   </div>
