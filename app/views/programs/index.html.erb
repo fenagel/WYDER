@@ -1,14 +1,23 @@
 <div class="container">
-  <h1>Search Results</h1>
+  <h1>Your Search Results</h1>
   <div class="row">
-    <div class="filter">
-      <p>PLACEHOLDER FILTER CRITERIA ////// </p>
+    <div class="filter col-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <p>Locations</p>
+        </li>
+        <li class="nav-item">
+          <p>Subjects</p>
+        </li>
+        <li class="nav-item">
+          <p>Private/Public</p>
+        </li>
+      </ul>
     </div>
-    <div class="cards">
-      <%= render partial: "/shared/card", locals: { programs: @programs } %>
+    <div class="cards col-9">
+      <%= render partial: "/shared/card", locals: { programs: @programs, program: @program } %>
     </div>
   </div>
   <br>
   <br>
-  <img src="https://source.unsplash.com/640x427/?universities" />
 </div>
