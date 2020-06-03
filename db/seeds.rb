@@ -11,7 +11,9 @@ user.update(university: uni)
 uni.subjects.create!(
   [
     {name: "Computer Science"},
-    {name: "English"}
+    {name: "English"},
+    {name: "Rocket Science"},
+    {name: "Business Administration"}
   ]
 )
 uni.programs.create!(
@@ -27,11 +29,25 @@ uni.programs.create!(
       subject: Subject.find_by(name: "English"),
       degree: :msc,
       fee: 70_000
+    },
+    {
+      name: "Rocket Science",
+      subject: Subject.find_by(name: "Rocket Science"),
+      degree: :msc,
+      fee: 10_000
+    },
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :bsc,
+      fee: 398
     }
   ]
 )
 user.programs << Program.find_by(name: "Computer Science")
 user.programs << Program.find_by(name: "English")
+user.programs << Program.find_by(name: "Rocket Science")
+user.programs << Program.find_by(name: "Business Administration")
 
 
 
