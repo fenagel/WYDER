@@ -4,8 +4,21 @@ class ProgramsController < ApplicationController
   def index
     if params[:query].present?
       @programs = Program.where(location: params[:query])
+      @subjects = Subject.all
+      @names = []
+      @subjects.each do |s|
+        @names << s.name
+      end
+      @no_duplicates = @names.uniq
     else
       @programs = Program.all
+      @subjects = Subject.all
+      @subjects = Subject.all
+      @names = []
+      @subjects.each do |s|
+        @names << s.name
+      end
+      @no_duplicates = @names.uniq
     end
   end
 
