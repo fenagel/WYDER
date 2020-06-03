@@ -1,4 +1,35 @@
-<div style="text-align: center; padding-top: 30px;">
-<h1>Welcome to the WYDER Hompepage</h1>
+<div class="container1">
+  <div class="start">
+    <div class="headline">
+      <h1 style="color: white;">WYDER</h1>
+      <p>
+        <span id="banner-typed-text"></span>
+      </p>
+    </div>
+    <div class="search">
+      <h2>Where do you want to study?</h2>
+      <%= form_tag programs_path, method: :get do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Location"
+        %>
+      <%= submit_tag "Search", class: "btn btn-info"%>
+      <% end %>
+    </div>
+  </div>
+</div>
 
+<div class="container1">
+  <div style="display: flex; justify-content: space-around; padding-top: 60px;">
+    <div>
+     <h1>Card 1</h1>
+    </div>
+    <div>
+     <h1>Card 2</h1>
+    </div>
+    <div>
+     <h1>Card 3</h1>
+    </div>
+  </div>
 </div>

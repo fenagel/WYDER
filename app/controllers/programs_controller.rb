@@ -2,7 +2,11 @@ class ProgramsController < ApplicationController
   before_action :set_program, only: [:show, :edit, :update, :destroy]
 
   def index
-    @programs = Program.all
+    if params[:query].present?
+      @programs = Program.where(location: params[:query])
+    else
+      @programs = Program.all
+    end
   end
 
   def show
