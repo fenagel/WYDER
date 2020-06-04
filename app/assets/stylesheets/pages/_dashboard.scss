@@ -1,21 +1,33 @@
-.welcoming {
-  background-color: $seashell;
+#counter {
+  border-width: 1px;
+  border-style: solid;
+  border-color: $apricot;
+  border-radius: 20px;
+  padding: 10px;
   text-align: center;
 }
-
 .filter-div {
-  background-color: $apricot;
+  background-color: $white;
   margin-top: 50px;
 }
 
 .user-filter {
-  background-color: $apricot;
+  background-color: $white;
+  display: flex;
+  justify-content: space-around;
 }
 
 #filter-text {
-  position: absolute;
-  left: 100px;
+  position: left;
+  color: $dark-apricot;
 
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: center;
+  transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s
 
 }
 
@@ -24,13 +36,20 @@
   margin-top: 20px;
 }
 
-.btn-group {
-  display: flex;
-  display: space-between;
+.fas {
+  margin-left: 15px;
 }
 
-.btn {
+.btn:hover{
   background-color: $dark-apricot;
-  padding: 20px;
+}
+
+
+.btn {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 10px;
   margin: 20px;
+  color: $dark-grey;
+  cursor: pointer;
 }
