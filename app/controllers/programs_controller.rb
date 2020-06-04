@@ -13,7 +13,7 @@ class ProgramsController < ApplicationController
     end
 
     if params[:location].present?
-            sql_query = " \
+        sql_query = " \
         universities.location @@ :query \
       "
       @programs = @programs.joins(:university).where(sql_query, query: "%#{params[:location]}%")
