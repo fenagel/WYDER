@@ -74,12 +74,20 @@
         <!-- Div for all the videos/filtered if click on buttons -->
 
         <div class="all-videos">
+        <div class="cards col-9">
+          <% @user.bookmarks.each do |b| %>
+            <%= render partial: "/shared/card", locals: { programs: @programs, program: @program } %>
+          <% end %>
+        </div>
+      </div>
+
+        <!-- <div class="all-videos">
           <% @user.bookmarks.each do |b| %>
            <div class="card-program-1">
              <%= b.program.name %>
            </div>
           <% end %>
-        </div>
+        </div> -->
       </div>
 </div>
 
