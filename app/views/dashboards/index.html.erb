@@ -25,7 +25,7 @@
                 Subject
               </button>
                 <div class="dropdown-menu">
-                  <% @programs.each do |p| %>
+                  <% @bookmarked_programs.each do |p| %>
                   <%= link_to p.subject.name,
                   dashboards_path(subject_name: p.subject.name),
                   class: "dropdown-item" %>
@@ -33,7 +33,6 @@
                   <%= link_to "All Subjects",
                 dashboards_path(subject_name: "subjects"),
                 class: "dropdown-item" %>
-                <a class="dropdown-item" href="#">All subjects</a>
               </div>
           </div>
 
@@ -42,7 +41,7 @@
               University
             </button>
               <div class="dropdown-menu">
-                <% @programs.each do |p| %>
+                <% @bookmarked_programs.each do |p| %>
                   <%= link_to p.university.name,
                   dashboards_path(university_name: p.university.name),
                   class: "dropdown-item" %>
@@ -58,7 +57,7 @@
               Program
             </button>
               <div class="dropdown-menu">
-                <% @programs.each do |p| %>
+                <% @bookmarked_programs.each do |p| %>
                   <%= link_to p.name, dashboards_path(program_name: p.name), class: "dropdown-item" %>
                 <% end %>
                 <%= link_to "All Programs", dashboards_path(program_name: "programs"), class: "dropdown-item" %>
@@ -70,15 +69,14 @@
 
         <div class="user-filter" style="display: flex; justify-content: space-around">
           <div class="btn-group">
-            <% if @user.programs.count > 0 %>
-              <%= link_to @programs.first.subject.name,
-              dashboards_path(subject_name: @programs.first.subject.name), class: "btn"%>
+            <% if @bookmarked_programs.count > 0 %>
+              <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
             <% end %>
-            <% if @programs.count > 1 %>
-              <%= link_to @programs.last.subject.name, dashboards_path(subject_name: @programs.last.subject.name), class: "btn" %>
+            <% if @bookmarked_programs.count > 1 %>
+              <%= link_to @bookmarked_programs.last.subject.name, dashboards_path(subject_name: @bookmarked_programs.last.subject.name), class: "btn" %>
             <% end %>
-            <% if @programs.count > 2 %>
-              <%= link_to @programs.second.subject.name, dashboards_path(subject_name: @programs.second.subject.name), class: "btn" %>
+            <% if @bookmarked_programs.count > 2 %>
+              <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
             <% end %>
           </div>
         </div>

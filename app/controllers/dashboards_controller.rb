@@ -3,6 +3,7 @@ class DashboardsController < ApplicationController
     @user = current_user
     @bookmarks = Bookmark.includes(:subjects, :universities).all
     @programs = @user.programs
+    @bookmarked_programs = @user.programs
 
     if params[:subject_name].present?
       @programs = @programs.where(subject: Subject.find_by(name: params[:subject_name]))
@@ -12,6 +13,9 @@ class DashboardsController < ApplicationController
 
     elsif params[:university_name].present?
       @programs = @programs.where(university: University.find_by(name: params[:university_name]))
+
+    else
+      @programs = @user.programs
 
     end
   end
