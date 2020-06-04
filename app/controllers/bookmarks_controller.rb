@@ -3,12 +3,15 @@ class BookmarksController < ApplicationController
   def create
     @bookmark = Bookmark.new(params[:program])
     @bookmark.program = @program
+    @bookmark.user = current_user
     @bookmark.save
+    redirect_to @program
   end
 
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
+    redirect_to @program
   end
 
   private

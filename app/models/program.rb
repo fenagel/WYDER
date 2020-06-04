@@ -4,5 +4,7 @@ class Program < ApplicationRecord
   has_many :bookmarks, dependent: :destroy
   has_many :users, through: :bookmarks
 
-  enum degree: { msc: 0, bsc: 1, msa: 2, bsa: 3, msl: 4, bsl: 5 }
+  enum degree: { MSc: 0, BSc: 1, MA: 2, BA: 3, MLitt: 4, BLitt: 5 }
+
+  DEGREES = ["MSc", "BSc", "MA", "BA", "MLitt", "BLitt"]
 end

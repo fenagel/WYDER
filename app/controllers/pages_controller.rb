@@ -3,6 +3,10 @@ class PagesController < ApplicationController
 
   def home
     @programs = Program.all
+    @locations = []
+    @programs.each do |p|
+      @locations << p.university.location
+    end
   end
 
 end

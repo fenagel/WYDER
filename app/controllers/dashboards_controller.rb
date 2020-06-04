@@ -14,8 +14,12 @@ class DashboardsController < ApplicationController
     elsif params[:university_name].present?
       @programs = @programs.where(university: University.find_by(name: params[:university_name]))
 
+    elsif
+      params[:university_location].present?
+      @programs = @programs.where(university: University.find_by(location: params[:university_location]))
+
     else
-      @programs = @user.programs
+      @all_videos = @user.programs
 
     end
   end

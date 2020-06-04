@@ -28,6 +28,10 @@ class ProgramsController < ApplicationController
   end
 
   def show
+    @bookmark = Bookmark.find_by(user: current_user, program: @program)
+    if @bookmark.nil?
+      @bookmark = Bookmark.new
+    end
   end
 
   def new
