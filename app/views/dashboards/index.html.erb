@@ -18,19 +18,20 @@
         <!-- FILTERS DIV (The bottom filters are just random subjects/programs from user bookmarks) -->
         <div class="filter-div" style="display: flex; justify-content: space-between; justify-content: center;">
           <h4 id="filter-text">Filter by:</h4>
-          <div class="btn-group">
 
+          <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Subject
             </button>
-            <div class="dropdown-menu">
-              <% @programs.each do |s| %>
-                <a class="dropdown-item" href="#"><%= s.subject.name %></a>
-              <% end %>
-            <div class="dropdown-divider"></div>
+              <div class="dropdown-menu">
+                <% @programs.each do |s| %>
+                  <a class="dropdown-item" href="#"><%= s.subject.name %></a>
+                <% end %>
               <a class="dropdown-item" href="#">All subjects</a>
             </div>
+          </div>
 
+          <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               University
             </button>
@@ -38,10 +39,11 @@
               <% @user.bookmarks.each do |b| %>
                 <a class="dropdown-item" href="#"><%= b.program.university.name %></a>
               <% end %>
-            <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">All subjects</a>
+              <a class="dropdown-item" href="#">All Universities</a>
             </div>
+          </div>
 
+          <div class="btn-group">
             <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown">
               Program
             </button>
@@ -49,8 +51,7 @@
               <% @programs.each do |p| %>
                 <a class="dropdown-item" href="#"><%= p.subject.name %></a>
               <% end %>
-            <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">All subjects</a>
+              <a class="dropdown-item" href="#">All programs</a>
             </div>
           </div>
         </div>
