@@ -18,6 +18,7 @@ class ProgramsController < ApplicationController
       "
       @programs = @programs.joins(:university).where(sql_query, query: "%#{params[:location]}%")
     end
+
       @subjects = Subject.all
       @names = []
       @subjects.each do |s|
