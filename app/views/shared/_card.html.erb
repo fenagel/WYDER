@@ -1,6 +1,5 @@
 <% programs.each do |program| %>
-  <%= link_to program do %>
-    <div class="card-program-1 mb-5">
+  <%= link_to program, class: "card-program-1 mb-5" do %>
       <div class="card-program-1-image">
         <%= image_tag "https://source.unsplash.com/640x427/?universities", alt: "uni-thumbnail" %>
         <i class="fas fa-play-circle position-icon"></i>
@@ -8,10 +7,8 @@
       <div class="card-program-1-infos">
         <h2><%= program.university.name %></h2>
         <h3><%= program.name %></h3>
-        <h3><%= program.degree %></h3>
-        <h3><%= program.university.location %></h3>
-        <p><%= program.description %></p>
+        <h4><%= program.degree %></h4>
+        <h4><%= program.university.location %></h4>
       </div>
-    </div>
   <% end %>
 <% end %>
