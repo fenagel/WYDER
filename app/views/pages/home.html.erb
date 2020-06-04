@@ -6,7 +6,7 @@
         <span id="banner-typed-text"></span>
       </h3>
     </div>
-      <div class="search" style="padding-left: 180px;">
+    <div class="search" style="padding-left: 180px;">
       <h2 style="padding: 20px;">What do you want to study?</h2>
       <%= form_tag programs_path, method: :get do %>
       <%= text_field_tag :name,
@@ -15,10 +15,8 @@
       placeholder: "e.g. Computer Science"
         %>
       <h2 style="padding: 20px;">What degree do you want to have?</h2>
-      <%= text_field_tag :degree,
-      params[:degree],
-      class: "form-control",
-      placeholder: "e.g. msc"
+      <%= select_tag  :degree, options_for_select(["", "MSc", "BSc", "MA", "BA", "MLitt", "BLitt"]),
+      class: "form-control"
         %>
       <h2 style="padding: 20px;">Where do you want to study?</h2>
       <%= text_field_tag :location,
@@ -49,3 +47,5 @@
   </div>
 </div>
 </div>
+
+
