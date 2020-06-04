@@ -21,7 +21,7 @@ uni.programs.create!(
     {
       name: "Computer Science",
       subject: Subject.find_by(name: "Computer Science"),
-      degree: :msc,
+      degree: :MSc,
       fee: 100_000,
       video_url: "https://www.youtube.com/embed/JG-mHQX8eZw",
       application_link: "https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/",
@@ -30,19 +30,19 @@ uni.programs.create!(
     {
       name: "English",
       subject: Subject.find_by(name: "English"),
-      degree: :msc,
+      degree: :MSc,
       fee: 70_000
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 85_000
     },
     {
       name: "Law",
       subject: Subject.find_by(name: "Law"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 185_000
     }
   ]
@@ -66,13 +66,13 @@ uni1.programs.create!(
     {
       name: "Computer Science",
       subject: Subject.find_by(name: "Computer Science"),
-      degree: :msc,
+      degree: :MSc,
       fee: 450
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 398
     }
   ]
@@ -96,13 +96,13 @@ uni2.programs.create!(
     {
       name: "Rocket Science",
       subject: Subject.find_by(name: "Rocket Science"),
-      degree: :msc,
+      degree: :MSc,
       fee: 10_000
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 703
     }
   ]
@@ -126,13 +126,13 @@ uni3.programs.create!(
     {
       name: "Rocket Science",
       subject: Subject.find_by(name: "Rocket Science"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 100_000
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :msc,
+      degree: :MSc,
       fee: 703
     }
   ]
@@ -157,19 +157,19 @@ uni4.programs.create!(
     {
       name: "Rocket Science",
       subject: Subject.find_by(name: "Rocket Science"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 250
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :msc,
+      degree: :MSc,
       fee: 70_000
     },
     {
       name: "Ökotrophologie",
       subject: Subject.find_by(name: "Ökotrophologie"),
-      degree: :msc,
+      degree: :MSc,
       fee: 70_000
     }
   ]
