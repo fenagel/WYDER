@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Your Search Results</h1>
-  <div class="row">
+  <div class="row" style="padding-top: 45px;">
     <div class="filter col-3">
       <h3>Filter</h3>
       <ul class="nav flex-column">
@@ -17,7 +17,7 @@
           <a class="btn btn-filter" data-toggle="collapse" href="#collapseSubjects" role="button" aria-expanded="false" aria-controls="collapseSubjects">Subjects</a>
           <div class="collapse" id="collapseSubjects">
             <ul>
-              <%= @no_duplicates.each do |subject| %>
+              <% @no_duplicates.each do |subject| %>
               <li><%= subject %></li>
               <% end %>
             </ul>

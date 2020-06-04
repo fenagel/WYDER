@@ -6,12 +6,12 @@ User.destroy_all
 University.destroy_all
 
 user = User.create!(email: "bob@example.com", password: "123456")
-uni = University.create!(name: "Oxford", location: "Oxford, UK", kind: :privately_owned)
+uni = University.create!(name: "Technische Universität München", location: "Munich", kind: :publicly_owned)
 user.update(university: uni)
 uni.subjects.create!(
   [
     {name: "Computer Science"},
-    {name: "English"},
+    {name: "Medicine"},
     {name: "Business Administration"},
     {name: "Law"}
   ]
@@ -23,37 +23,49 @@ uni.programs.create!(
       subject: Subject.find_by(name: "Computer Science"),
       degree: :MSc,
       fee: 100_000,
-      video_url: "https://www.youtube.com/embed/JG-mHQX8eZw",
+      video_url: "https://www.youtube.com/embed/iu6UboRqanI",
       application_link: "https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/",
       description: "Computational Science and Engineering (CSE) is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
     },
     {
-      name: "English",
-      subject: Subject.find_by(name: "English"),
+      name: "Medicine",
+      subject: Subject.find_by(name: "Medicine"),
       degree: :MSc,
-      fee: 70_000
+      fee: 70_000,
+      video_url: "https://www.youtube.com/embed/iu6UboRqanI",
+      application_link: "https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/",
+      description: "Medicine is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
       degree: :BSc,
-      fee: 85_000
+      fee: 85_000,
+      video_url: "https://www.youtube.com/embed/iu6UboRqanI",
+      application_link: "https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
     },
     {
       name: "Law",
       subject: Subject.find_by(name: "Law"),
       degree: :BSc,
-      fee: 185_000
+      fee: 185_000,
+      video_url: "https://www.youtube.com/embed/iu6UboRqanI",
+      application_link: "https://www.tum.de/studium/studienangebot/detail/computational-science-and-engineering-cse-master-of-science-msc/",
+      description: "Law is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+
     }
   ]
 )
 user.programs << Program.find_by(name: "Computer Science")
-user.programs << Program.find_by(name: "English")
+user.programs << Program.find_by(name: "Medicine")
 user.programs << Program.find_by(name: "Business Administration")
 user.programs << Program.find_by(name: "Law")
 
+
+
 user1 = User.create!(email: "alex@example.com", password: "123456")
-uni1 = University.create!(name: "WWU - Münster", location: "Münster", kind: :publicly_owned)
+uni1 = University.create!(name: "Westfälische Wilhelms-Universität Münster", location: "Münster", kind: :publicly_owned)
 user1.update(university: uni1)
 uni1.subjects.create!(
   [
@@ -67,13 +79,20 @@ uni1.programs.create!(
       name: "Computer Science",
       subject: Subject.find_by(name: "Computer Science"),
       degree: :MSc,
-      fee: 450
+      fee: 450,
+      video_url: "https://www.youtube.com/embed/C58J3PM-5-0",
+      application_link: "https://www.uni-muenster.de/studieninteressierte/bewerbung/index.html",
+      description: "CS is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
       degree: :BSc,
-      fee: 398
+      fee: 398,
+      video_url: "https://www.youtube.com/embed/Pvjhrgk9sAY",
+      application_link: "https://www.uni-muenster.de/studieninteressierte/bewerbung/index.html",
+      description: "Business Adminstration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+
     }
   ]
 )
@@ -197,7 +216,7 @@ uni6.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/97tYFZVVHJE",
       application_link: "https://www.hs-bremen.de/internet/de/studium/bewerbung/online/",
