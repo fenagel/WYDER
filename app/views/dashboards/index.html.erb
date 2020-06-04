@@ -1,9 +1,48 @@
-<div class="container mt-5">
-  <div class="welcoming">
-    <h1>Welcome to your Dashboard <%= @user.email %> !</h1>
-  </div>
-      <div class="col-sm-12 col-md-6 pt-5">
-        <h3>
+<div class="container mt-3">
+
+        <!-- FILTERS DIV DROPDWONS -->
+
+        <div class="filter-div">
+          <h4 id="filter-text">FIND<i class="fas fa-search"></i></h4>
+
+            <div class="buttons">
+              <% if @bookmarked_programs.count > 0 %>
+                <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
+              <% end %>
+
+              <% if @bookmarked_programs.count > 1 %>
+                <%= link_to @bookmarked_programs.second.university.location, dashboards_path(university_location: @bookmarked_programs.second.university.location), class: "btn" %>
+              <% end %>
+
+              <% if @bookmarked_programs.count > 2 %>
+                <%= link_to @bookmarked_programs.third.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
+              <% end %>
+
+              <% if @bookmarked_programs.count > 3 %>
+                <%= link_to @bookmarked_programs.fourth.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
+              <% end %>
+
+              <% if @bookmarked_programs.count > 4 %>
+                <%= link_to @bookmarked_programs.fifth.university.location, dashboards_path(university_location: @bookmarked_programs.fifth.university.location), class: "btn" %>
+              <% end %>
+
+              <% if @bookmarked_programs.count > 5 %>
+                <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
+              <% end %>
+
+              <% if @bookmarked_programs.count > 6 %>
+                <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
+              <% end %>
+
+              <%= link_to "All Saved Videos", dashboards_path(all_programs: "all videos"), class: "btn"%>
+            </div>
+
+          </div>
+
+        <!-- Div for all the videos/filtered if click on buttons -->
+
+        <div class="col-sm-12 col-md-6 pt-5">
+        <h5 id="counter">
           <% if @user.bookmarks.count == 0 %>
             <%= "You don't have any bookmarked videos 😦" %>
           <% elsif @bookmarks.count == 1 %>
@@ -11,77 +50,8 @@
           <% else @user.bookmarks.count %>
             <%= "You have #{@user.bookmarks.count} bookmarked videos 📹" %>
           <% end %>
-        </h3>
+        </h5>
       </div>
-      <div>
-
-        <!-- FILTERS DIV DROPDWONS -->
-
-        <div class="filter-div" style="display: flex; justify-content: space-between; justify-content: center;">
-          <h4 id="filter-text">Filter by:</h4>
-
-            <div class="btn-group">
-              <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Subject
-              </button>
-                <div class="dropdown-menu">
-                  <% @bookmarked_programs.each do |p| %>
-                  <%= link_to p.subject.name,
-                  dashboards_path(subject_name: p.subject.name),
-                  class: "dropdown-item" %>
-                  <% end %>
-                  <%= link_to "All Subjects",
-                dashboards_path(subject_name: "subjects"),
-                class: "dropdown-item" %>
-              </div>
-          </div>
-
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              University
-            </button>
-              <div class="dropdown-menu">
-                <% @bookmarked_programs.each do |p| %>
-                  <%= link_to p.university.name,
-                  dashboards_path(university_name: p.university.name),
-                  class: "dropdown-item" %>
-                <% end %>
-                <%= link_to "All Universities",
-                dashboards_path(university_name: "universities"),
-                class: "dropdown-item" %>
-              </div>
-          </div>
-
-          <div class="btn-group">
-            <button type="button" class="btn btn-primary dropdown-toggle m-3" data-toggle="dropdown">
-              Program
-            </button>
-              <div class="dropdown-menu">
-                <% @bookmarked_programs.each do |p| %>
-                  <%= link_to p.name, dashboards_path(program_name: p.name), class: "dropdown-item" %>
-                <% end %>
-                <%= link_to "All Programs", dashboards_path(program_name: "programs"), class: "dropdown-item" %>
-              </div>
-          </div>
-        </div>
-
-        <!-- These buttons are just random subjects from user bookmarks) -->
-
-        <div class="user-filter" style="display: flex; justify-content: space-around">
-          <div class="btn-group">
-            <% if @bookmarked_programs.count > 0 %>
-              <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
-            <% end %>
-            <% if @bookmarked_programs.count > 1 %>
-              <%= link_to @bookmarked_programs.last.subject.name, dashboards_path(subject_name: @bookmarked_programs.last.subject.name), class: "btn" %>
-            <% end %>
-            <% if @bookmarked_programs.count > 2 %>
-              <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
-            <% end %>
-          </div>
-        </div>
-
-        <!-- Div for all the videos/filtered if click on buttons -->
 
         <div class="all-videos p-5">
         <div class="cards col-9">
