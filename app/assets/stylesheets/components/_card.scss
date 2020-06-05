@@ -1,12 +1,14 @@
 .card-program-1 {
   overflow: hidden;
   height: 150px;
+  width: 410px;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.15);
   display: flex;
   align-items: center;
   text-decoration: none !important;
   color: $dark-grey !important;
+  margin-bottom: 0;
 
   .position-icon {
     position: absolute;
@@ -50,14 +52,15 @@
   width: 200px;
   position: relative;
   height: 100%;
+  margin: 12px;
 }
 .card-program-1-image img {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 130px;
 }
 .program-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
+  grid-gap: 35px;
 }

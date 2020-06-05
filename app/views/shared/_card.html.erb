@@ -2,15 +2,17 @@
   <% programs.each do |program| %>
     <%= link_to program, class: "card-program-1 mb-5" do %>
         <div style="display: flex;">
-          <div class="card-program-1-image">
-            <%= cl_image_tag program.university.photo.key, alt: "uni-thumbnail" %>
-            <i class="fas fa-play-circle position-icon"></i>
-          </div>
-          <div class="card-program-1-infos">
-            <h2 style="padding: 0;"><%= program.university.name %></h2>
-            <h3><%= program.name %></h3>
-            <h4><%= program.degree %></h4>
-            <h4><%= program.university.location %></h4>
+          <div style="display: flex; justify-content: space-between;">
+            <div class="card-program-1-image">
+              <%= cl_image_tag program.university.photo.key, alt: "uni-thumbnail" %>
+              <i class="fas fa-play-circle position-icon"></i>
+            </div>
+            <div class="card-program-1-infos">
+              <h2 style="padding: 0;"><%= program.university.name %></h2>
+              <h3><%= program.subject.name %></h3>
+              <h4><%= program.degree %></h4>
+              <h4><%= program.university.location %></h4>
+            </div>
           </div>
         </div>
     <% end %>
