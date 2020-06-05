@@ -108,7 +108,7 @@ user1.programs << Program.find_by(name: "Business Administration")
 
 
 user2 = User.create!(email: "felix@example.com", password: "123456")
-uni2 = University.create!(name: "Uni Mannheim", location: "Mannheim", kind: :publicly_owned)
+uni2 = University.create!(name: "University Mannheim", location: "Mannheim", kind: :publicly_owned)
 uni2_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591348119/xeztaxui5pqah2w9lmxh.jpg')
 uni2.photo.attach(io: uni2_image, filename: 'UniMannheim.jpg', content_type: 'image/jpg')
 user2.update(university: uni2)
@@ -126,7 +126,7 @@ uni2.programs.create!(
       degree: :MSc,
       fee: 10_000,
       video_url: "https://www.youtube.com/embed/-Q3vD7gf_S0",
-      application_link: "https://www.uni-muenster.de/studieninteressierte/bewerbung/index.html",
+      application_link: "https://onlinebewerbung.uni-mannheim.de/portal/register.php",
       description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
 
     },
@@ -136,7 +136,7 @@ uni2.programs.create!(
       degree: :BSc,
       fee: 703,
       video_url: "https://www.youtube.com/embed/-Q3vD7gf_S0",
-      application_link: "https://www.uni-muenster.de/studieninteressierte/bewerbung/index.html",
+      application_link: "https://onlinebewerbung.uni-mannheim.de/portal/register.php",
       description: "Business Adminstration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
 
     }
