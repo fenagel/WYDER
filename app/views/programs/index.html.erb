@@ -2,7 +2,7 @@
   <h1 style="padding-top: 60px;">Your Search Results</h1>
   <div class="row" style="padding-top: 45px;">
     <div>
-      <div class="filter col-3" style="position: sticky; top: 200px;">
+      <div class="filter col-3" style="position: sticky; top: 50px;">
         <h3>Filter</h3>
         <hr>
         <ul class="nav flex-column">
@@ -27,11 +27,12 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="btn btn-filter" data-toggle="collapse" href="#collapsePrivate" role="button" aria-expanded="false" aria-controls="collapsePrivate">Public/Private</a>
-            <div class="collapse" id="collapsePrivate">
+            <a class="btn btn-filter" data-toggle="collapse" href="#collapseDegree" role="button" aria-expanded="false" aria-controls="collapseDegree">Degree</a>
+            <div class="collapse" id="collapseDegree">
               <ul>
-                <li>Public</li>
-                <li>Private</li>
+                <% Program::DEGREES.each do |d| %>
+                <li><%= link_to d, programs_path(degree: d) %></li>
+                <% end %>
               </ul>
             </div>
           </li>
