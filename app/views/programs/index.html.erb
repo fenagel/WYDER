@@ -8,8 +8,9 @@
           <a class="btn btn-filter" data-toggle="collapse" href="#collapseLocations" role="button" aria-expanded="false" aria-controls="collapseLocations">Locations</a>
           <div class="collapse" id="collapseLocations">
             <ul>
-              <li>Location 1</li>
-              <li>Location 2</li>
+              <% @no_duplicates_uni.each do |p| %>
+                  <li><%= p %></li>
+              <% end %>
             </ul>
           </div>
         </li>

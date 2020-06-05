@@ -14,24 +14,20 @@
                 <%= link_to @bookmarked_programs.second.university.location, dashboards_path(university_location: @bookmarked_programs.second.university.location), class: "btn" %>
               <% end %>
 
-              <% if @bookmarked_programs.count > 2 %>
+              <% if @bookmarked_programs.count > 2 && @bookmarked_programs.third.subject.name != @bookmarked_programs.first.subject.name %>
                 <%= link_to @bookmarked_programs.third.subject.name, dashboards_path(subject_name: @bookmarked_programs.third.subject.name), class: "btn" %>
               <% end %>
 
-              <% if @bookmarked_programs.count > 3 %>
+              <% if @bookmarked_programs.count > 3 && @bookmarked_programs.fourth.subject.name != @bookmarked_programs.third.subject.name %>
                 <%= link_to @bookmarked_programs.fourth.subject.name, dashboards_path(subject_name: @bookmarked_programs.fourth.subject.name), class: "btn"%>
               <% end %>
 
-              <% if @bookmarked_programs.count > 4 %>
+              <% if @bookmarked_programs.count > 4 && @bookmarked_programs.fifth.university.location != @bookmarked_programs.second.university.location %>
                 <%= link_to @bookmarked_programs.fifth.university.location, dashboards_path(university_location: @bookmarked_programs.fifth.university.location), class: "btn" %>
               <% end %>
 
-              <% if @bookmarked_programs.count > 5 %>
-                <%= link_to @bookmarked_programs.sixth.subject.name, dashboards_path(subject_name: @bookmarked_programs.sixth.subject.name), class: "btn" %>
-              <% end %>
-
-              <% if @bookmarked_programs.count > 6 %>
-                <%= link_to @bookmarked_programs.seventh.university.location, dashboards_path(university_location: @bookmarked_programs.seventh.university.location), class: "btn"%>
+              <% if @bookmarked_programs.count > 5 && @bookmarked_programs.second.subject.name != @bookmarked_programs.fourth.subject.name %>
+                <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
               <% end %>
 
               <%= link_to "All Saved Videos", dashboards_path(all_programs: "all videos"), class: "btn"%>
