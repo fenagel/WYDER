@@ -37,6 +37,16 @@ document.addEventListener('turbolinks:load', () => {
   }
 });
 
+import { loadDynamicBannerQuestion } from '../components/question';
+
+document.addEventListener('turbolinks:load', () => {
+  // Call your functions here, e.g:
+  // initSelect2();
+  if (document.querySelector('.question') != undefined) {
+    loadDynamicBannerQuestion();
+  }
+});
+
 // if (document.querySelector('.bookmark-container') != undefined) {
 //   document.querySelector('.bookmark-container').addEventListener('click',() => {
 //     document.querySelectorAll('.bookmark').forEach((bookmark) => {

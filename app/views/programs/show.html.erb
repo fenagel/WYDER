@@ -1,7 +1,7 @@
 <div class="container">
   <h1 id="headline"><%= @program.university.name %></h1>
   <div class="row justify-content-center mb-2">
-    <iframe class="iframe" width="560" height="315" src="<%= @program.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe class="iframe" width="600" height="355" src="<%= @program.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <!-- bookmark-button -> unmarked -->
     <div class="bookmark-container">
       <% if @bookmark.id %>
@@ -31,6 +31,65 @@
     </div>
   </div>
 </div>
+<div style="display: flex; justify-content: space-around; padding: 30px;
+ background-color: #FFF3EB; margin: 40px; border-radius: 40px;">
+  <div>
+    <h2 style="padding-bottom: 0px;">Accreditation</h2>
+    <hr>
+    <p style="text-align: center;">Triple Crown - AACSB, EQUIS, AMBA</p>
+  </div>
+  <div>
+    <h2 style="padding-bottom: 0px;">Financial Times Ranking</h2>
+    <hr>
+    <p style="text-align: center;">#14</p>
+  </div>
+  <div>
+    <h2 style="padding-bottom: 0px;">Professors</h2>
+    <hr>
+    <p style="text-align: center;">194</p>
+  </div>
+</div>
+<div style="display: flex; justify-content: space-around;">
+  <div class="question">
+    <h1 id="h1">How to apply?</h1>
+    <hr>
+    <h3>
+      <span id="banner-typed-question"></span>
+    </h3>
+    <h2 style="padding-bottom: 0;">What do you need to enroll?</h2>
+    <ol>
+      <li>Hochschul­zugangsberechtigung (meist Abitur)</li>
+      <li>Deutschnachweis</li>
+      <li>Teilnahme­bescheinigung des Orientierungs­tests</li>
+      <li>Nachweis von sehr guten Englisch­kenntnissen spätestens zu Semesterbeginn</li>
+    </ol>
+  </div>
+  <div style="padding-top: 79px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/lu-1rw467OA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+</div>
+
+<div style="text-align: center; background-color: #FFF3EB; margin: 40px; border-radius: 40px;">
+  <br>
+  <br>
+  <h2><i>"Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential."</i></h2>
+  <p>-John Maxwell</p>
+  <br>
+  <br>
+</div>
+
+<div style="display: flex; justify-content: space-around; margin: 30px;">
+  <div style="padding-top: 79px;">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kP_et05RvFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
+  <div class="question" style="padding-left: 56px;padding-top: 20px;">
+    <h1 id="h1">Mannheim Campus</h1>
+    <hr>
+    <p>The University of Mannheim (in German: Universität Mannheim), abbreviated UMA, is a public research university in Mannheim, Baden-Württemberg, Germany. Founded in 1967, the university has its origins in the Palatine Academy of Sciences, which was established by Elector Carl Theodor at Mannheim Palace in 1763, as well as the Handelshochschule (Commercial College Mannheim), which was founded in 1907.[4]
+
+The university offers undergraduate and graduate programs in business administration, economics, law, social sciences, humanities, mathematics, computer science and information systems. The university's campus is located in the city center of Mannheim and its main campus is in the Mannheim Palace. In the academic year 2016/2017 the university had 12,000 full-time students, 907 academic staff, with 194 professors, and a total income of around €123 million.[2][1] It is organized into five schools and two graduate colleges.</p>
+  </div>
+</div>
+
 
 
 
