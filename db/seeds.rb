@@ -212,7 +212,7 @@ user4.programs << Program.find_by(name: "Ökotrophologie")
 
 
 user6 = User.create!(email: "abraham@gmail.com", password: "OldTestament")
-uni6 = University.create!(name: "Hochschule Bremen", location: "Bremen, Germany", kind: :privately_owned)
+uni6 = University.create!(name: "Hochschule Bremen", location: "Bremen", kind: :privately_owned)
 uni6_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591348180/vwg5jcpgxabzzjp2rft0.jpg')
 uni6.photo.attach(io: uni6_image, filename: 'HochBremen.jpg', content_type: 'image/jpg')
 user6.update(university: uni6)
