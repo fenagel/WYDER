@@ -4,7 +4,7 @@
         <div style="display: flex;">
           <div style="display: flex; justify-content: space-between;">
             <div class="card-program-1-image">
-              <%= image_tag "https://source.unsplash.com/640x427/?universities", alt: "uni-thumbnail" %>
+              <%= cl_image_tag program.university.photo.key, alt: "uni-thumbnail" %>
               <i class="fas fa-play-circle position-icon"></i>
             </div>
             <div class="card-program-1-infos">

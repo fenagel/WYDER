@@ -26,11 +26,17 @@ class ProgramsController < ApplicationController
       @programs = @programs.joins(:university).where(sql_query, query: "%#{params[:location]}%")
     end
       @subjects = Subject.all
+      @universities = University.all
+      @uni_locations = []
       @names = []
       @subjects.each do |s|
         @names << s.name
       end
+      @universities.each do |u|
+        @uni_locations << u.location
+      end
       @no_duplicates = @names.uniq
+      @no_duplicates_uni = @uni_locations.uniq
   end
 
   def show
