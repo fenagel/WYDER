@@ -132,7 +132,7 @@ user2.programs << Program.find_by(name: "Business Administration")
 
 
 user3 = User.create!(email: "lea@example.com", password: "123456")
-uni3 = University.create!(name: "Uni Zurich", location: "Zurich", kind: :publicly_owned)
+uni3 = University.create!(name: "ETH Zurich", location: "Zurich", kind: :publicly_owned)
 user3.update(university: uni3)
 uni3.subjects.create!(
   [

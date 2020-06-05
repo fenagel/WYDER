@@ -4,5 +4,7 @@ class University < ApplicationRecord
   has_many :university_subjects
   has_many :subjects, through: :university_subjects
 
+  has_one_attached :photo
+
   enum kind: { privately_owned: 1, publicly_owned: 0 }
 end
