@@ -1,15 +1,28 @@
 // Specific CSS for your home-page
 .start {
-  text-align: center;
-  padding-top: 50px;
+  padding: 60px 0px;
+  padding-top: 95px;
   display: flex;
   justify-content: space-evenly;
   height: 675px;
 }
 
  .container1 {
-  margin-left: 25px;
-  margin-right: 25px;
+  background-color: $seashell;
+  margin: 20px 60px;
+  margin-top: 45px;
+  border-radius: 20px;
+ }
+
+ .container2 {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 90px;
+ }
+
+  .container3 {
+  margin: 20px 60px;
+  display: flex; justify-content: center;
  }
 
 .caption {
@@ -17,4 +30,25 @@
   height: 100px;
   max-resolution: res;
   padding-top: 50px;
+}
+
+.search {
+  background-color: $seashell;
+  padding:10px 15px;
+  border-radius: 50px;
+  margin-left: 70px;
+  border: 2px solid #FFCEAD;
+  border-radius: 10%;
+}
+
+.headline {
+  padding-top: 157px;
+}
+
+#h1 {
+  font-size: 70px;
+}
+
+#h2 {
+  padding: 20px;
 }
