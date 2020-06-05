@@ -225,7 +225,7 @@ uni6.programs.create!(
     {
       name: "Computer Science",
       subject: Subject.find_by(name: "Computer Science"),
-      degree: :msc,
+      degree: :MSc,
       fee: 500,
       video_url: "https://www.youtube.com/embed/97tYFZVVHJE",
       application_link: "https://www.hs-bremen.de/internet/de/studium/bewerbung/online/",
@@ -234,7 +234,7 @@ uni6.programs.create!(
     {
       name: "Medicine",
       subject: Subject.find_by(name: "Medicine"),
-      degree: :msc,
+      degree: :MSc,
       fee: 500,
       video_url: "https://www.youtube.com/embed/97tYFZVVHJE",
       application_link: "https://www.hs-bremen.de/internet/de/studium/bewerbung/online/",
@@ -243,7 +243,7 @@ uni6.programs.create!(
     {
       name: "Law",
       subject: Subject.find_by(name: "Law"),
-      degree: :msc,
+      degree: :MSc,
       fee: 500,
       video_url: "https://www.youtube.com/embed/97tYFZVVHJE",
       application_link: "https://www.hs-bremen.de/internet/de/studium/bewerbung/online/",
@@ -252,7 +252,7 @@ uni6.programs.create!(
     {
       name: "Journalism",
       subject: Subject.find_by(name: "Journalism"),
-      degree: :msc,
+      degree: :MSc,
       fee: 500,
       video_url: "https://www.youtube.com/embed/97tYFZVVHJE",
       application_link: "https://www.hs-bremen.de/internet/de/studium/bewerbung/online/",
@@ -284,7 +284,7 @@ uni7.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/TNfEnZ_pcnc",
       application_link: "https://www.uni-passau.de/bewerbung-einschreibung/",
@@ -293,7 +293,7 @@ uni7.programs.create!(
     {
       name: "Computer Science",
       subject: Subject.find_by(name: "Computer Science"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/TNfEnZ_pcnc",
       application_link: "https://www.uni-passau.de/bewerbung-einschreibung/",
@@ -302,7 +302,7 @@ uni7.programs.create!(
     {
       name: "Law",
       subject: Subject.find_by(name: "Law"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/TNfEnZ_pcnc",
       application_link: "https://www.uni-passau.de/bewerbung-einschreibung/",
@@ -311,7 +311,7 @@ uni7.programs.create!(
     {
       name: "Medicine",
       subject: Subject.find_by(name: "Medicine"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/TNfEnZ_pcnc",
       application_link: "https://www.uni-passau.de/bewerbung-einschreibung/",
@@ -320,7 +320,7 @@ uni7.programs.create!(
     {
       name: "Journalism",
       subject: Subject.find_by(name: "Journalism"),
-      degree: :bsc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/TNfEnZ_pcnc",
       application_link: "https://www.uni-passau.de/bewerbung-einschreibung/",

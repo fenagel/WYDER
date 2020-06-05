@@ -11,6 +11,7 @@
   background-color: $seashell;
   margin: 20px 60px;
   margin-top: 45px;
+  border-radius: 20px;
  }
 
  .container2 {
@@ -32,10 +33,12 @@
 }
 
 .search {
-  background-color: $apricot;
+  background-color: $seashell;
   padding:10px 15px;
   border-radius: 50px;
   margin-left: 70px;
+  border: 2px solid #FFCEAD;
+  border-radius: 10%;
 }
 
 .headline {
