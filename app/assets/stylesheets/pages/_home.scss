@@ -52,3 +52,62 @@
 #h2 {
   padding: 20px;
 }
+.form-control {
+  border:none;
+}
+.outer-search-bar {
+  background-color: $white;
+  border: 1px solid;
+  border-radius: 12px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  font-size:14px;
+}
+.filter-criteria {
+  flex: 1 0 auto;
+  display:flex;
+  :hover {
+    box-sizing: border-box;
+  }
+}
+.borderright {
+  align-self: center;
+  border-right: 1px solid;
+  flex: 0 0 0px;
+  height: 44px;
+}
+.submit {
+  margin-left: 2px;
+  padding: 11px;
+  display: flex;
+}
+.btn-search {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin:0px;
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 14px;
+    outline: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 24px;
+    padding-right: 24px;
+    white-space: nowrap;
+    text-align: center;
+    color: $dark-grey;
+    background: linear-gradient(to right, $apricot 0%, $apricot 50%, $seashell 100%);
+    :hover {
+      transition: box-shadow 0.2s ease, -ms-transform 0.1s ease, -webkit-transform 0.1s ease, transform 0.1s ease;
+    }
+}
