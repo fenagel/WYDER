@@ -9,7 +9,7 @@
           <div class="collapse" id="collapseLocations">
             <ul>
               <% @no_duplicates_uni.each do |p| %>
-                  <li><%= p %></li>
+                <li><%= link_to p, programs_path(location: p) %></li>
               <% end %>
             </ul>
           </div>
@@ -19,7 +19,7 @@
           <div class="collapse" id="collapseSubjects">
             <ul>
               <% @no_duplicates.each do |subject| %>
-              <li><%= subject %></li>
+              <li><%= link_to subject, programs_path(name: subject) %></li>
               <% end %>
             </ul>
           </div>
