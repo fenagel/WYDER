@@ -4,21 +4,27 @@ class ProgramsController < ApplicationController
   def index
     @programs = Program.all
 
-    if params[:name].present?
-      @programs = @programs.where(name: params[:name])
+    if params[:subject].present?
+      sql_query = " \
+        subjects.name @@ :query \
+      "
+      @programs = @programs.joins(:subject).where(sql_query, query: "%#{params[:subject]}%")
     end
+
+    # if params[:subject].present?
+    #   @programs = Program.joins(:subjects).where(name: params[:subject])
+    # end
 
     if params[:degree].present?
       @programs = @programs.where(degree: params[:degree])
     end
 
     if params[:location].present?
-        sql_query = " \
+      sql_query = " \
         universities.location @@ :query \
       "
       @programs = @programs.joins(:university).where(sql_query, query: "%#{params[:location]}%")
     end
-
       @subjects = Subject.all
       @names = []
       @subjects.each do |s|

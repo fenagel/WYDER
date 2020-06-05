@@ -10,8 +10,8 @@
     <div class="search">
       <h2 id="h2">What do you want to study?</h2>
       <%= form_tag programs_path, method: :get do %>
-      <%= text_field_tag :name,
-      params[:name],
+      <%= text_field_tag :subject,
+      params[:subject],
       class: "form-control",
       placeholder: "e.g. Computer Science"
         %>
@@ -20,10 +20,8 @@
       class: "form-control"
         %>
       <h2 id="h2">Where do you want to study?</h2>
-      <%= text_field_tag :location,
-      params[:location],
-      class: "form-control",
-      placeholder: "e.g. Oxford"
+      <%= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
+      class: "form-control"
         %>
       <div style="padding-top:40px; text-align: center;">
         <%= submit_tag "Search", class: "btn btn-info"%>
@@ -32,6 +30,38 @@
     </div>
   </div>
 </div>
+    <br>
+<!-- <div class="outer-search-bar">
+  <%#= form_tag programs_path, method: :get do %>
+  <div class="filter-criteria">
+    <div class="location">
+      <p>Location</p>
+      <%#= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
+      class: "form-control"
+        %>
+    </div>
+    <div class="borderright"></div>
+    <div class="subject">
+      <p>Subject</p>
+      <%#= text_field_tag :subject,
+      params[:subject],
+      class: "form-control",
+      placeholder: "e.g. Computer Science"
+      %>
+    </div>
+    <div class="borderright"></div>
+    <div class="degree">
+      <p>Degree</p>
+      <%#= select_tag  :degree, options_for_select(["", "MSc", "BSc", "MA", "BA", "MLitt", "BLitt"]),
+      class: "form-control"
+        %>
+    </div>
+    <div class="submit">
+      <%#= submit_tag "🔍Search", class: "btn-search"%>
+    </div>
+    <#% end %>
+  </div>
+</div>-->
     <br>
 <hr>
 <div class="caption">
