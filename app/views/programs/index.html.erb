@@ -21,7 +21,7 @@
             <div class="collapse" id="collapseSubjects">
               <ul>
                 <% @no_duplicates.each do |subject| %>
-                <li><%= link_to subject, programs_path(name: subject) %></li>
+                <li><%= link_to subject, programs_path(subject: subject) %></li>
                 <% end %>
               </ul>
             </div>
