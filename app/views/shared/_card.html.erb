@@ -4,8 +4,12 @@
         <div style="display: flex;">
           <div style="display: flex; justify-content: space-between;">
             <div class="card-program-1-image">
-              <%= cl_image_tag program.university.photo.key, alt: "uni-thumbnail" %>
-              <i class="fas fa-play-circle position-icon"></i>
+              <% if program.university.photo.present? %>
+                <%= cl_image_tag program.university.photo.key, alt: "uni-thumbnail" %>
+              <% else %>
+                <%= cl_image_tag("https://source.unsplash.com/800x600/?universities") %>
+              <% end %>
+              <i class=“fas fa-play-circle position-icon”></i>
             </div>
             <div class="card-program-1-infos">
               <h2 style="padding: 0;"><%= program.university.name %></h2>

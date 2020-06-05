@@ -1,40 +1,42 @@
 <div class="container">
   <h1 style="padding-top: 60px;">Your Search Results</h1>
   <div class="row" style="padding-top: 45px;">
-    <div class="filter col-3">
-      <h3>Filter</h3>
-      <hr>
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="btn btn-filter" data-toggle="collapse" href="#collapseLocations" role="button" aria-expanded="false" aria-controls="collapseLocations">Locations</a>
-          <div class="collapse" id="collapseLocations">
-            <ul>
-              <% @no_duplicates_uni.each do |p| %>
-                <li><%= link_to p, programs_path(location: p) %></li>
-              <% end %>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-filter" data-toggle="collapse" href="#collapseSubjects" role="button" aria-expanded="false" aria-controls="collapseSubjects">Subjects</a>
-          <div class="collapse" id="collapseSubjects">
-            <ul>
-              <% @no_duplicates.each do |subject| %>
-              <li><%= link_to subject, programs_path(name: subject) %></li>
-              <% end %>
-            </ul>
-          </div>
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-filter" data-toggle="collapse" href="#collapsePrivate" role="button" aria-expanded="false" aria-controls="collapsePrivate">Public/Private</a>
-          <div class="collapse" id="collapsePrivate">
-            <ul>
-              <li>Public</li>
-              <li>Private</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
+    <div>
+      <div class="filter col-3" style="position: sticky; top: 200px;">
+        <h3>Filter</h3>
+        <hr>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="btn btn-filter" data-toggle="collapse" href="#collapseLocations" role="button" aria-expanded="false" aria-controls="collapseLocations">Locations</a>
+            <div class="collapse" id="collapseLocations">
+              <ul>
+                <% @no_duplicates_uni.each do |p| %>
+                  <li><%= link_to p, programs_path(location: p) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-filter" data-toggle="collapse" href="#collapseSubjects" role="button" aria-expanded="false" aria-controls="collapseSubjects">Subjects</a>
+            <div class="collapse" id="collapseSubjects">
+              <ul>
+                <% @no_duplicates.each do |subject| %>
+                <li><%= link_to subject, programs_path(name: subject) %></li>
+                <% end %>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-filter" data-toggle="collapse" href="#collapsePrivate" role="button" aria-expanded="false" aria-controls="collapsePrivate">Public/Private</a>
+            <div class="collapse" id="collapsePrivate">
+              <ul>
+                <li>Public</li>
+                <li>Private</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="cards col-9">
       <%= render partial: "/shared/card", locals: { programs: @programs, program: @program } %>
