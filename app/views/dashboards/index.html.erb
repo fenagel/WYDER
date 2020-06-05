@@ -15,11 +15,11 @@
               <% end %>
 
               <% if @bookmarked_programs.count > 2 %>
-                <%= link_to @bookmarked_programs.third.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
+                <%= link_to @bookmarked_programs.third.subject.name, dashboards_path(subject_name: @bookmarked_programs.third.subject.name), class: "btn" %>
               <% end %>
 
               <% if @bookmarked_programs.count > 3 %>
-                <%= link_to @bookmarked_programs.fourth.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
+                <%= link_to @bookmarked_programs.fourth.subject.name, dashboards_path(subject_name: @bookmarked_programs.fourth.subject.name), class: "btn"%>
               <% end %>
 
               <% if @bookmarked_programs.count > 4 %>
@@ -27,11 +27,11 @@
               <% end %>
 
               <% if @bookmarked_programs.count > 5 %>
-                <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
+                <%= link_to @bookmarked_programs.sixth.subject.name, dashboards_path(subject_name: @bookmarked_programs.sixth.subject.name), class: "btn" %>
               <% end %>
 
               <% if @bookmarked_programs.count > 6 %>
-                <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
+                <%= link_to @bookmarked_programs.seventh.university.location, dashboards_path(university_location: @bookmarked_programs.seventh.university.location), class: "btn"%>
               <% end %>
 
               <%= link_to "All Saved Videos", dashboards_path(all_programs: "all videos"), class: "btn"%>
@@ -54,7 +54,7 @@
       </div>
 
         <div class="all-videos p-5">
-        <div class="cards col-9">
+        <div class="cards">
           <%= render partial: "/shared/card", locals: { programs: @programs } %>
         </div>
       </div>
