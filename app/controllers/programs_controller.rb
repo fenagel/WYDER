@@ -18,11 +18,8 @@ class ProgramsController < ApplicationController
       @programs = @programs.where(degree: params[:degree])
     end
 
-    if params[:location].present?
-      sql_query = " \
-        universities.location @@ :query \
-      "
-      @programs = @programs.joins(:university).where(sql_query, query: "%#{params[:location]}%")
+    if params[:locations].present?
+      @programs = @programs.joins(:university).where(universities: { location: params[:locations] })
     end
       @subjects = Subject.all
       @universities = University.all

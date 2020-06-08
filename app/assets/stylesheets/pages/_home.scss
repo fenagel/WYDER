@@ -83,3 +83,9 @@ h1 {
   padding-top:10px;
   text-align: center;
 }
+
+.locations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
