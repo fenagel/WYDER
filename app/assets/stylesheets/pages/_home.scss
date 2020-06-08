@@ -5,10 +5,11 @@
   display: flex;
   justify-content: space-evenly;
   height: 675px;
+  background: "../images/BGI.png";
 }
 
  .container1 {
-  background-color: $seashell;
+  background-image: "../images/BGI.png";
   margin: 20px 60px;
   margin-top: 45px;
   border-radius: 20px;
