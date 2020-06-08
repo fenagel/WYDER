@@ -1,5 +1,5 @@
 class BookmarksController < ApplicationController
-  before_action :set_program
+  before_action :set_program, :authenticate_user!
   def create
     @bookmark = Bookmark.new(params[:program])
     @bookmark.program = @program
