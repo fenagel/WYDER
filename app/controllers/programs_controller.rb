@@ -55,6 +55,7 @@ class ProgramsController < ApplicationController
   end
 
   def update
+    index
   end
 
   def destroy

@@ -22,7 +22,7 @@
         <div class="border-hover">
           <h2>Degree</h2>
           <%= select_tag  :degree, options_for_select(["", "MSc", "BSc", "MA", "BA", "MLitt", "BLitt"]),
-          class: "form-control"
+          class: "form-control", prompt: "Select one.."
             %>
         </div>
         <div class="right-border">
@@ -30,7 +30,7 @@
         <div class="border-hover">
           <h2>Location</h2>
           <%= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
-          class: "form-control"
+          class: "form-control", prompt: "Where?"
             %>
         </div>
         <div class="right-border">
