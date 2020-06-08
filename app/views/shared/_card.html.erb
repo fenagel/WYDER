@@ -1,8 +1,8 @@
 <div class="program-grid">
   <% programs.each do |program| %>
-    <%= link_to program, class: "card-program-1 mb-5" do %>
-        <div style="display: flex;">
-          <div style="display: flex; justify-content: space-between;">
+    <%= link_to program, class: "card-program-1" do %>
+        <div class="d-flex">
+          <div class="d-flex justify-content-between">
             <div class="card-program-1-image">
               <% if program.university.photo.present? %>
                 <%= cl_image_tag program.university.photo.key, alt: "uni-thumbnail" %>
@@ -12,7 +12,7 @@
               <i class="fas fa-play-circle position-icon"></i>
             </div>
             <div class="card-program-1-infos">
-              <h2 style="padding: 0;"><%= program.university.name %></h2>
+              <h2><%= program.university.name %></h2>
               <h3><%= program.subject.name %></h3>
               <h4><%= program.degree %></h4>
               <h4><%= program.university.location %></h4>
