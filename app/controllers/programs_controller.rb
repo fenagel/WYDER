@@ -3,7 +3,6 @@ class ProgramsController < ApplicationController
 
   def index
     @programs = Program.all
-raise
     if params[:subject].present?
       sql_query = " \
         subjects.name @@ :query \
