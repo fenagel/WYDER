@@ -2,8 +2,21 @@
 
         <!-- FILTERS DIV DROPDWONS -->
 
+        <h5 id="counter">
+          <% if @user.bookmarks.count == 0 %>
+            <%= "Hey #{@user.name}, you don't have any bookmarked videos yet 😦" %>
+          <% elsif @bookmarks.count == 1 %>
+            <%= "Hey #{@user.name}, you have 1 bookmarked video 📹" %>
+          <% else @user.bookmarks.count %>
+            <%= "Hey #{@user.name}, you have #{@user.bookmarks.count} bookmarked videos 📹" %>
+          <% end %>
+        </h5>
+
+      <div class="all-videos p-5">
         <div class="filter-div">
           <h4 id="filter-text">FIND<i class="fas fa-search"></i></h4>
+
+          <!-- Div for all the videos/filtered if click on buttons -->
 
             <div class="buttons">
               <div class="top">
@@ -38,23 +51,8 @@
 
             </div>
 
-          </div>
+           </div>
 
-        <!-- Div for all the videos/filtered if click on buttons -->
-
-        <div class="col-sm-12 col-md-6 pt-5 m-0">
-        <h5 id="counter">
-          <% if @user.bookmarks.count == 0 %>
-            <%= "Hey #{@user.name}, you don't have any bookmarked videos yet 😦" %>
-          <% elsif @bookmarks.count == 1 %>
-            <%= "Hey #{@user.name}, you have 1 bookmarked video 📹" %>
-          <% else @user.bookmarks.count %>
-            <%= "Hey #{@user.name}, you have #{@user.bookmarks.count} bookmarked videos 📹" %>
-          <% end %>
-        </h5>
-      </div>
-
-      <div class="all-videos p-5">
         <div class="cards col-9">
           <%= render partial: "/shared/card", locals: { programs: @programs } %>
           <!-- <form>
@@ -63,6 +61,6 @@
           </form> -->
         </div>
       </div>
-</div>
+  </div>
 
 
