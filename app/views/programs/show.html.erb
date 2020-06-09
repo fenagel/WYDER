@@ -1,85 +1,86 @@
+<div class="goback">
+  <%= link_to "<< Back", programs_path %>
+</div>
 <div class="container">
   <h1 id="headline"><%= @program.university.name %></h1>
-  <div class="row justify-content-center mb-2">
-    <iframe class="iframe" width="600" height="355" src="<%= @program.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <!-- bookmark-button -> unmarked -->
-    <div class="bookmark-container">
-      <% if @bookmark.id %>
-        <%= link_to program_bookmark_path(@program, @bookmark), method: :delete do  %>
-        <svg class="bi bi-bookmark-fill bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
-        </svg>
-      <% end %>
-      <% else %>
-        <%= link_to program_bookmarks_path(@program, @bookmark), method: :post do  %>
-        <svg class="bi bi-bookmark bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
-        </svg>
-        <% end %>
-      <% end %>
-            <!-- bookmark-button -> marked -->
-
+  <div>
+    <div class="row justify-content-center mb-2">
+      <iframe class="iframe" width="600" height="355" src="<%= @program.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-  </div>
-  <div class="row justify-content-center mb-2">
+    <div class="row justify-content-center mb-2">
       <h2><%= @program.name %></h2>
-     <a class="btn btn-primary" href="<%= @program.application_link %>" target="_blank">Apply now</a>
-  </div>
-  <div class="row justify-content-center">
-    <div class="col-8">
-      <p><%= @program.description %></p>
+      <a class="btn-home" href="<%= @program.application_link %>" target="_blank">Apply now</a>
+      <div class="bookmark-container">
+        <% if @bookmark.id %>
+          <%= link_to program_bookmark_path(@program, @bookmark), method: :delete do  %>
+          <svg class="bi bi-bookmark-fill bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
+          </svg>
+        <% end %>
+        <% else %>
+          <%= link_to program_bookmarks_path(@program, @bookmark), method: :post do  %>
+          <svg class="bi bi-bookmark bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" d="M8 12l5 3V3a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12l5-3zm-4 1.234l4-2.4 4 2.4V3a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10.234z"/>
+          </svg>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-8">
+        <p><%= @program.description %></p>
+      </div>
     </div>
   </div>
 </div>
-<div style="display: flex; justify-content: space-around; padding: 30px;
- background-color: #FFF3EB; margin: 40px; border-radius: 40px;">
+<div class="uni-information">
   <div>
-    <h2 style="padding-bottom: 0px;">Accreditation</h2>
+    <h2>Accreditation</h2>
     <hr>
-    <p style="text-align: center;">Triple Crown - AACSB, EQUIS, AMBA</p>
+    <p>Triple Crown - AACSB, EQUIS, AMBA</p>
   </div>
   <div>
-    <h2 style="padding-bottom: 0px;">Financial Times Ranking</h2>
+    <h2>Financial Times Ranking</h2>
     <hr>
-    <p style="text-align: center;">#14</p>
+    <p>#14</p>
   </div>
   <div>
-    <h2 style="padding-bottom: 0px;">Professors</h2>
+    <h2>Professors</h2>
     <hr>
-    <p style="text-align: center;">194</p>
+    <p>194</p>
   </div>
 </div>
-<div style="display: flex; justify-content: space-around;">
+<div class="application">
   <div class="question">
     <h1 id="h1">How to apply?</h1>
     <hr>
     <h3>
       <span id="banner-typed-question"></span>
     </h3>
-    <h2 style="padding-bottom: 0;">What do you need to enroll?</h2>
+    <h2 style="padding-bottom: 0; text-decoration: none;">What do you need to enroll?</h2>
     <ol>
-      <li>Hochschul­zugangsberechtigung (meist Abitur)</li>
-      <li>Deutschnachweis</li>
-      <li>Teilnahme­bescheinigung des Orientierungs­tests</li>
-      <li>Nachweis von sehr guten Englisch­kenntnissen spätestens zu Semesterbeginn</li>
+      <li style="color: #535050;">University entrance qualification (mostly Abitur)</li>
+      <li style="color: #535050;">German language certificate</li>
+      <li style="color: #535050;">Certificate of attendance of the orientation test</li>
+      <li style="color: #535050;">Proof of very good English skills at the latest at the beginning of the semester</li>
     </ol>
   </div>
-  <div style="padding-top: 79px;">
+  <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/lu-1rw467OA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 </div>
 
-<div style="text-align: center; background-color: #FFF3EB; margin: 40px; border-radius: 40px;">
+<div class="quote">
   <br>
   <br>
-  <h2><i>"Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential."</i></h2>
-  <p>-John Maxwell</p>
+  <h3><i>"Successful and unsuccessful people do not vary greatly in their abilities. They vary in their desires to reach their potential."</i></h3>
+  <p>-John Maxwell-</p>
   <br>
   <br>
 </div>
 
 <div style="display: flex; justify-content: space-around; margin: 30px;">
-  <div style="padding-top: 79px;">
+  <div class="video">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kP_et05RvFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
   <div class="question" style="padding-left: 56px;padding-top: 20px;">
     <h1 id="h1">Mannheim Campus</h1>
