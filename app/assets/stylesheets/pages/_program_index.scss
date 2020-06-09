@@ -1,3 +1,27 @@
 li {
   color: $dark-apricot;
 }
+
+.flex {
+  display: flex;
+}
+
+.bottom-border {
+  border-bottom:solid 2px lightgrey;
+  padding-bottom: 10px;
+  height:40px;
+}
+
+.border-hover {
+  margin-top: 20px;
+  max-height: 92px;
+  padding: 5px;
+}
+
+.cards {
+  margin-left: 20px !important;
+}
+
+.form-control {
+  color: grey !important;
+}

@@ -68,6 +68,7 @@ user.programs << Program.find_by(name: "Law")
 
 
 
+
 user1 = User.create!(name: "Alex", email: "alex@example.com", password: "123456")
 uni1 = University.create!(name: "Westfälische Wilhelms-Universität Münster", location: "Münster", kind: :publicly_owned)
 uni1_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591348089/agar237kpclvgkrdwosk.jpg')
@@ -154,27 +155,35 @@ uni3.photo.attach(io: uni3_image, filename: 'ETH.jpg', content_type: 'image/jpg'
 user3.update(university: uni3)
 uni3.subjects.create!(
   [
-    {name: "Rocket Science"},
+    {name: "Computer Science"},
     {name: "Business Administration"}
   ]
 )
 uni3.programs.create!(
   [
     {
-      name: "Rocket Science",
-      subject: Subject.find_by(name: "Rocket Science"),
+      name: "Computer Science",
+      subject: Subject.find_by(name: "Computer Science"),
       degree: :BSc,
-      fee: 100_000
+      fee: 100_000,
+      video_url: "https://www.youtube.com/embed/-Q3vD7gf_S0",
+      application_link: "https://onlinebewerbung.uni-mannheim.de/portal/register.php",
+      description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+
     },
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
       degree: :MSc,
-      fee: 703
+      fee: 703,
+      video_url: "https://www.youtube.com/embed/-Q3vD7gf_S0",
+      application_link: "https://onlinebewerbung.uni-mannheim.de/portal/register.php",
+      description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+
     }
   ]
 )
-user3.programs << Program.find_by(name: "Rocket Science")
+user3.programs << Program.find_by(name: "Computer Science")
 user3.programs << Program.find_by(name: "Business Administration")
 
 
@@ -433,7 +442,6 @@ user8.programs << Program.find_by(name: "Computer Science")
 user8.programs << Program.find_by(name: "Law")
 user8.programs << Program.find_by(name: "Medicine")
 user8.programs << Program.find_by(name: "Journalism")
-
 
 
 

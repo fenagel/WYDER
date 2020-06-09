@@ -1,48 +1,53 @@
 <div class="container">
-  <h1 style="padding-top: 60px;">Your Search Results</h1>
+  <h5 class="counter">
+    <% if @programs.count == 0 %>
+      <%= "Unfortunately we couldn't find any Universities that match your criteria." %>
+    <% elsif @programs.count == 1 %>
+      <%= "We found 1 University that matches your criteria." %>
+    <% else @programs.count %>
+      <%= "We found #{@programs.count} Universities that match your criteria." %>
+    <% end %>
+  </h5>
   <div class="row" style="padding-top: 45px;">
-    <div>
-      <div class="filter col-3" style="position: sticky; top: 50px; width: 200px;">
-        <h3>Filter</h3>
-        <hr>
-        <ul class="nav flex-column">
-          <li class="nav-item">
-            <a class="btn btn-filter" data-toggle="collapse" href="#collapseLocations" role="button" aria-expanded="false" aria-controls="collapseLocations">Locations</a>
-            <div class="collapse" id="collapseLocations">
-              <ul>
-                <% @no_duplicates_uni.each do |p| %>
-                  <li><%= link_to p, programs_path(location: p) %></li>
-                <% end %>
-              </ul>
+
+  <div class="flex">
+    <%= form_tag programs_path, method: :get do %>
+          <div class="search">
+            <div class="border-hover">
+              <h2>Subject</h2>
+              <%= text_field_tag :subject,
+              params[:subject],
+              class: "form-control"%>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-filter" data-toggle="collapse" href="#collapseSubjects" role="button" aria-expanded="false" aria-controls="collapseSubjects">Subjects</a>
-            <div class="collapse" id="collapseSubjects">
-              <ul>
-                <% @no_duplicates.each do |subject| %>
-                <li><%= link_to subject, programs_path(subject: subject) %></li>
-                <% end %>
-              </ul>
+            <div class="bottom-border">
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="btn btn-filter" data-toggle="collapse" href="#collapseDegree" role="button" aria-expanded="false" aria-controls="collapseDegree">Degree</a>
-            <div class="collapse" id="collapseDegree">
-              <ul>
-                <% Program::DEGREES.each do |d| %>
-                <li><%= link_to d, programs_path(degree: d) %></li>
-                <% end %>
-              </ul>
+            <div class="border-hover">
+              <h2>Degree</h2>
+              <%= select_tag  :degree, options_for_select(["", "MSc", "BSc", "MA", "BA", "MLitt", "BLitt"], params[:degree]),
+              class: "form-control"
+                %>
             </div>
-          </li>
-        </ul>
+            <div class="bottom-border">
+            </div>
+            <div class="border-hover">
+              <h2>Location</h2>
+              <%= select_tag "location", options_from_collection_for_select(@universities, "location", "location", params[:location]), include_blank: true,
+              class: "form-control"
+                %>
+            </div>
+            <div class="bottom-border">
+            </div>
+          <div class="submit">
+            <%= submit_tag "Update", class: "btn btn-info"%>
+          </div>
+          <% end %>
+        </div>
+
+          <div class="cards col-9">
+            <%= render partial: "/shared/card", locals: { programs: @programs, program: @program } %>
+          </div>
+        </div>
+        <br>
+        <br>
       </div>
     </div>
-    <div class="cards col-9">
-      <%= render partial: "/shared/card", locals: { programs: @programs, program: @program } %>
-    </div>
-  </div>
-  <br>
-  <br>
-</div>
