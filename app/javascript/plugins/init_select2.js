@@ -3,10 +3,13 @@ import 'select2';
 
 const initSelect2 = () => {
   $('.js-example-placeholder-multiple').select2({
-    width: "100%",
-    placeholder: "Select a state",
+    dropdownAutoWidth: true,
+    multiple: true,
+    width: '100%',
+    height: '30px',
+    placeholder: "Select",
     allowClear: true
-  }); // (~ document.querySelectorAll)
+  });
 };
 
 export { initSelect2 };

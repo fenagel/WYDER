@@ -19,7 +19,7 @@
           <h2>Subject</h2>
           <%= text_field_tag :subject,
           params[:subject],
-          class: "form-control",
+          class: "subject form-control",
           placeholder: "e.g. Computer Science"
             %>
         </div>
@@ -38,7 +38,7 @@
           <%#= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
           class: "form-control", prompt: "Where?"
             %>
-          <select class="js-example-placeholder-multiple" name="locations[]" multiple="multiple" include_blank=true>
+          <select name="locations[]" multiple data-placeholder="Where?" multiple class="chosen-select">
           <%= @no_duplicates_uni.each do |location| %>
             <option value="<%= location %>"><%= location %></option>
           <% end %>
