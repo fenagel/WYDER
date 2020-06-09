@@ -9,3 +9,20 @@
   padding-top: 68px;
 }
 
+.container {
+  h1 {
+    padding-top: 60px;
+  }
+}
+
+.counter {
+  h6 {
+    font: bold;
+  }
+  border-width: 1px;
+  border-style: solid;
+  border-color: $apricot;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}

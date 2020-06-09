@@ -1,5 +1,13 @@
 <div class="container">
-  <h1 style="padding-top: 60px;">Your Search Results</h1>
+  <h5 class="counter">
+    <% if @programs.count == 0 %>
+      <%= "Unfortunately we couldn't find any Universities that match your criteria." %>
+    <% elsif @programs.count == 1 %>
+      <%= "We found 1 University that matches your criteria." %>
+    <% else @programs.count %>
+      <%= "We found #{@programs.count} Universities that match your criteria." %>
+    <% end %>
+  </h5>
   <div class="row" style="padding-top: 45px;">
 
   <div class="flex">
