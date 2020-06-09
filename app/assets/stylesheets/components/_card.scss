@@ -8,6 +8,7 @@
   align-items: center;
   text-decoration: none !important;
   color: $dark-grey !important;
+  padding: 12px;
 
   .position-icon {
     position: absolute;
@@ -17,41 +18,37 @@
     color: $white;
     z-index: 2;
     transform: translateY(-50%) translateX(-50%);
+    margin: 0 !important;
   }
 
-  h2 {
-    font-size: 16px;
-    font-weight: bold;
+  .card-program-title {
+    line-height: 17px;
+    display: block;
+    margin-bottom: 6px;
   }
 
-  h3 {
+  i.label {
+    display: block;
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-bottom: -4px;
+  }
+
+  p.card-program-info {
     font-size: 14px;
-    font-style: italic;
-  }
-
-  h4 {
-    font-size: 12px;
-    font-style: italic;
-  }
-
-
-  p {
-    font-size: 12px;
     line-height: 1.4;
-    opacity: .7;
-    margin-bottom: 0;
-    margin-top: 8px;
+    opacity: 0.9;
+    margin-bottom: 4px;
   }
 
-  .card-program-1-infos {
-    padding: 16px;
-  }
 }
 .card-program-1-image {
   width: 200px;
   position: relative;
   height: 100%;
-  margin: 12px;
+  margin-right: 12px;
 }
 .card-program-1-image img {
   object-fit: cover;
@@ -63,3 +60,5 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 35px;
 }
+
+

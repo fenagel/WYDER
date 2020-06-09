@@ -1,7 +1,6 @@
 <div class="program-grid">
   <% programs.each do |program| %>
     <%= link_to program, class: "card-program-1" do %>
-        <div class="d-flex">
           <div class="d-flex justify-content-between">
             <div class="card-program-1-image">
               <% if program.university.photo.present? %>
@@ -12,13 +11,12 @@
               <i class="fas fa-play-circle position-icon"></i>
             </div>
             <div class="card-program-1-infos">
-              <h2><%= program.university.name %></h2>
-              <h3><%= program.subject.name %></h3>
-              <h4><%= program.degree %></h4>
-              <h4><%= program.university.location %></h4>
+              <span class="card-program-title"><%= program.university.name %></span>
+              <p class="card-program-info"><i class="label">Subject</i><%= program.subject.name %></p>
+              <p class="card-program-info"><i class="label">Degree</i><%= program.degree %></p>
+              <p class="card-program-info"><i class="label">Location</i><%= program.university.location %></p>
             </div>
           </div>
-        </div>
     <% end %>
   <% end %>
 </div>
