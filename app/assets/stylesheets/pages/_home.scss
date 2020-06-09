@@ -210,3 +210,16 @@ h1 {
     left: 0px;
   }
 }
+
+.strikethrough {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 367px;
+    height: 2px;
+    background-color: black;
+    top: 37px;
+    left: 0px;
+  }
+}
