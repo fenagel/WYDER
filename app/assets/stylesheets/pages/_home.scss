@@ -110,7 +110,8 @@
 
 .right-border {
   border-right:solid 2px lightgrey;
-  height:40px;
+  height:80px;
+  margin-bottom: 5px;
 }
 
 .border-hover {
@@ -155,9 +156,10 @@ h1 {
 
 .chosen-container {
   width:400px !important;
-  padding-top: 6px !important;
-  padding-left: 2px !important;
+  padding-top: 7px !important;
+  padding-left: 6px !important;
   font-size: 1rem !important;
+  padding-bottom: 4px;
 }
 
 .chosen-choices {
@@ -189,6 +191,24 @@ h1 {
     color: $dark-apricot !important;
     line-height: 13px;
     cursor: default;
+    font-family: Zilla Slab;
+}
+
+.chosen-container-multi .chosen-choices li.search-field input[type=text] {
+  font-family: inherit !important;
+}
+
+.strikethrough {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 367px;
+    height: 2px;
+    background-color: black;
+    top: 37px;
+    left: 0px;
+  }
 }
 
 .strikethrough {
