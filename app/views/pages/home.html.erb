@@ -1,11 +1,15 @@
 <div class="container1">
   <div class="start">
     <div class="headline">
-      <h1>Welcome To WYDER</h1>
+        <h1><span id="banner-typed-text"></span></h1>
+      <div class="description">
+        <div>
+          <p id="first-description">
+            Finding the right Subject of Study, a proper City to live, and a fitting University can be hard sometimes. We know that. Lets work on it together.
+          </p>
+        </div>
+      </div>
       <hr>
-      <h3>
-        <span id="banner-typed-text"></span>
-      </h3>
     </div>
     <%= form_tag programs_path, method: :get do %>
       <div class="search d-flex">
@@ -35,15 +39,13 @@
         </div>
         <div class="right-border">
         </div>
-      <div class="submit">
-        <%= submit_tag "Search", class: "btn btn-info"%>
-      </div>
+        <div class="submit">
+          <%= button_tag type: 'submit', class: "btn-home" do%><i class="fas fa-arrow-right"></i><% end %>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
-    <br>
-    <br>
 <hr>
 <div class="caption">
   <h1>Videos that might interest you</h1>
