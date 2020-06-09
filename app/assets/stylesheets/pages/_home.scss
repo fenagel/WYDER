@@ -22,6 +22,7 @@
     margin: 0 !important;
   }
   transition: ease all 0.8s;
+  text-decoration: none;
 }
 
 .btn-home:hover {
@@ -188,4 +189,17 @@ h1 {
     color: $dark-apricot !important;
     line-height: 13px;
     cursor: default;
+}
+
+.strikethrough {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 367px;
+    height: 2px;
+    background-color: black;
+    top: 37px;
+    left: 0px;
+  }
 }
