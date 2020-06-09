@@ -47,6 +47,11 @@ document.addEventListener('turbolinks:load', () => {
   }
 });
 
+import { initSelect2 } from '../plugins/init_select2';
+
+// [...]
+initSelect2();
+
 // if (document.querySelector('.bookmark-container') != undefined) {
 //   document.querySelector('.bookmark-container').addEventListener('click',() => {
 //     document.querySelectorAll('.bookmark').forEach((bookmark) => {

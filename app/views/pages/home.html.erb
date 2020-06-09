@@ -26,16 +26,20 @@
         <div class="border-hover">
           <h2>Degree</h2>
           <%= select_tag  :degree, options_for_select(["", "MSc", "BSc", "MA", "BA", "MLitt", "BLitt"]),
-          class: "form-control"
+          class: "form-control", prompt: "Select one.."
             %>
         </div>
         <div class="right-border">
         </div>
         <div class="border-hover">
           <h2>Location</h2>
-          <%= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
-          class: "form-control"
+          <%#= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
+          class: "form-control", prompt: "Where?"
             %>
+          <select class="js-example-basic-multiple" name="locations[]" multiple="multiple" style="width:100%">
+            <option value="Bremen">Bremen</option>
+            <option value="Berlin">Berlin</option>
+          </select>
         </div>
         <div class="right-border">
         </div>
