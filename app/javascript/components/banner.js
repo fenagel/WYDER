@@ -7,7 +7,7 @@ const loadDynamicBannerText = () => {
   });
   setTimeout(function(){
     document.querySelector("#banner-typed-text").classList.add('strikethrough');
-    }, 6000);
+    }, 4000);
   }
 
 export { loadDynamicBannerText };

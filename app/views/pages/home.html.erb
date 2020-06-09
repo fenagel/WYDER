@@ -35,9 +35,6 @@
         </div>
         <div class="border-hover">
           <h2>Location</h2>
-          <%#= select_tag "location", options_from_collection_for_select(@universities, "location", "location"), include_blank: true,
-          class: "form-control", prompt: "Where?"
-            %>
           <select name="locations[]" multiple data-placeholder="Where?" multiple class="chosen-select">
           <%= @no_duplicates_uni.each do |location| %>
             <option value="<%= location %>"><%= location %></option>
