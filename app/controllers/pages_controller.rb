@@ -9,6 +9,5 @@ class PagesController < ApplicationController
       uni_locations << u.location
     end
     @no_duplicates_uni = uni_locations.uniq
-    console
   end
 end
