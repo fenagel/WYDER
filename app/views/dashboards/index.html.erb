@@ -45,11 +45,11 @@
         <div class="col-sm-12 col-md-6 pt-5 m-0">
         <h5 id="counter">
           <% if @user.bookmarks.count == 0 %>
-            <%= "You don't have any bookmarked videos 😦" %>
+            <%= "Hey #{@user.name}, you don't have any bookmarked videos yet 😦" %>
           <% elsif @bookmarks.count == 1 %>
-            <%= "You have 1 bookmarked video 📹" %>
+            <%= "Hey #{@user.name}, you have 1 bookmarked video 📹" %>
           <% else @user.bookmarks.count %>
-            <%= "You have #{@user.bookmarks.count} bookmarked videos 📹" %>
+            <%= "Hey #{@user.name}, you have #{@user.bookmarks.count} bookmarked videos 📹" %>
           <% end %>
         </h5>
       </div>
