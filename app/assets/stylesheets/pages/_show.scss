@@ -4,15 +4,59 @@
 }
 
 h2 {
-  padding: 30px;
+  padding: 21px;
 }
 
 .bookmark-container {
   position: relative;
   svg {
-    position: absolute;
+    margin-top: 17px;
   }
   svg.hidden {
     display: none;
+  }
+}
+
+.goback {
+  position: sticky;
+  top: 20px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.uni-information {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background-color: #FFF3EB;
+  margin: 40px;
+  border-radius: 40px;
+
+  p {
+    text-align: center;
+  }
+}
+
+.application {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 70px;
+}
+
+li {
+  color: #535050;
+}
+
+.video {
+  padding-top: 79px;
+}
+
+.quote {
+  text-align: center;
+  background-color: #FFF3EB;
+  margin: 40px;
+  border-radius: 40px;
+  i {
+    line-height: 2;
   }
 }
