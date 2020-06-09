@@ -52,6 +52,12 @@ import { initSelect2 } from '../plugins/init_select2';
 // [...]
 initSelect2();
 
+import { initChosenjs } from '../plugins/init_chosenjs';
+import 'chosen-js/chosen.min.css';
+// [...]
+initChosenjs();
+
+
 // if (document.querySelector('.bookmark-container') != undefined) {
 //   document.querySelector('.bookmark-container').addEventListener('click',() => {
 //     document.querySelectorAll('.bookmark').forEach((bookmark) => {
