@@ -6,55 +6,63 @@
           <h4 id="filter-text">FIND<i class="fas fa-search"></i></h4>
 
             <div class="buttons">
-              <% if @bookmarked_programs.count > 0 %>
-                <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
-              <% end %>
+              <div class="top">
+                <%= link_to "All Saved Videos", dashboards_path(all_programs: "all videos"), class: "btn"%>
+              </div>
 
-              <% if @bookmarked_programs.count > 1 %>
-                <%= link_to @bookmarked_programs.second.university.location, dashboards_path(university_location: @bookmarked_programs.second.university.location), class: "btn" %>
-              <% end %>
+              <div class="bottom">
+                <% if @bookmarked_programs.count > 1 %>
+                  <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn"%>
+                <% end %>
 
-              <% if @bookmarked_programs.count > 2 && @bookmarked_programs.third.subject.name != @bookmarked_programs.first.subject.name %>
-                <%= link_to @bookmarked_programs.third.subject.name, dashboards_path(subject_name: @bookmarked_programs.third.subject.name), class: "btn" %>
-              <% end %>
+                <% if @bookmarked_programs.count > 2 %>
+                  <%= link_to @bookmarked_programs.second.university.location, dashboards_path(university_location: @bookmarked_programs.second.university.location), class: "btn" %>
+                <% end %>
 
-              <% if @bookmarked_programs.count > 3 && @bookmarked_programs.fourth.subject.name != @bookmarked_programs.third.subject.name %>
-                <%= link_to @bookmarked_programs.fourth.subject.name, dashboards_path(subject_name: @bookmarked_programs.fourth.subject.name), class: "btn"%>
-              <% end %>
+                <% if @bookmarked_programs.count > 4 && @bookmarked_programs.third.subject.name != @bookmarked_programs.first.subject.name %>
+                  <%= link_to @bookmarked_programs.third.subject.name, dashboards_path(subject_name: @bookmarked_programs.third.subject.name), class: "btn" %>
+                <% end %>
 
-              <% if @bookmarked_programs.count > 4 && @bookmarked_programs.fifth.university.location != @bookmarked_programs.second.university.location %>
-                <%= link_to @bookmarked_programs.fifth.university.location, dashboards_path(university_location: @bookmarked_programs.fifth.university.location), class: "btn" %>
-              <% end %>
+                <% if @bookmarked_programs.count > 6 && @bookmarked_programs.fourth.subject.name != @bookmarked_programs.third.subject.name %>
+                  <%= link_to @bookmarked_programs.fourth.subject.name, dashboards_path(subject_name: @bookmarked_programs.fourth.subject.name), class: "btn"%>
+                <% end %>
 
-              <% if @bookmarked_programs.count > 5 && @bookmarked_programs.second.subject.name != @bookmarked_programs.fourth.subject.name %>
-                <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
-              <% end %>
+                <% if @bookmarked_programs.count > 8 && @bookmarked_programs.fifth.university.location != @bookmarked_programs.second.university.location %>
+                  <%= link_to @bookmarked_programs.fifth.university.location, dashboards_path(university_location: @bookmarked_programs.fifth.university.location), class: "btn" %>
+                <% end %>
 
-              <%= link_to "All Saved Videos", dashboards_path(all_programs: "all videos"), class: "btn"%>
+                <% if @bookmarked_programs.count > 9 && @bookmarked_programs.second.subject.name != @bookmarked_programs.fourth.subject.name %>
+                  <%= link_to @bookmarked_programs.second.subject.name, dashboards_path(subject_name: @bookmarked_programs.second.subject.name), class: "btn" %>
+                <% end %>
+              </div>
+
             </div>
 
           </div>
 
         <!-- Div for all the videos/filtered if click on buttons -->
 
-        <div class="col-sm-12 col-md-6 pt-5">
+        <div class="col-sm-12 col-md-6 pt-5 m-0">
         <h5 id="counter">
           <% if @user.bookmarks.count == 0 %>
-            <%= "You don't have any bookmarked videos 😦" %>
+            <%= "Hey #{@user.name}, you don't have any bookmarked videos yet 😦" %>
           <% elsif @bookmarks.count == 1 %>
-            <%= "You have 1 bookmarked video 📹" %>
+            <%= "Hey #{@user.name}, you have 1 bookmarked video 📹" %>
           <% else @user.bookmarks.count %>
-            <%= "You have #{@user.bookmarks.count} bookmarked videos 📹" %>
+            <%= "Hey #{@user.name}, you have #{@user.bookmarks.count} bookmarked videos 📹" %>
           <% end %>
         </h5>
       </div>
 
-        <div class="all-videos p-5">
-        <div class="cards col-9" style="display: contents;">
+      <div class="all-videos p-5">
+        <div class="cards col-9">
           <%= render partial: "/shared/card", locals: { programs: @programs } %>
+          <!-- <form>
+            <label for="fname">This is your personal comment section ☺️</label><br>
+            <input type="text" id="fname" name="fname"><br>
+          </form> -->
         </div>
       </div>
-    </div>
 </div>
 
 

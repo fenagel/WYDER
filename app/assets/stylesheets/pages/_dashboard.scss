@@ -26,7 +26,6 @@
   border-width: 1px;
   border-style: solid;
   border-color: $apricot;
-  border-radius: 20px;
   padding: 10px;
   text-align: center;
 }
@@ -41,10 +40,14 @@
 
 .buttons {
   display: grid;
-  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 75px 75px;
   justify-content: center;
   transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s
 
+}
+
+.top {
+  text-align: center;
 }
 
 .all-videos {
@@ -63,9 +66,10 @@
 
 .btn {
   background-color: transparent;
-  border-radius: 20px;
+  border: 2px solid $apricot;
+  border-radius: 12px;
   padding: 10px;
-  margin: 20px;
+  margin: 15px;
   color: $dark-grey;
   cursor: pointer;
 }
