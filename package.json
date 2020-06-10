@@ -2,6 +2,7 @@
   "name": "WYDER",
   "private": true,
   "dependencies": {
+    "@lottiefiles/lottie-player": "^0.5.1",
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
