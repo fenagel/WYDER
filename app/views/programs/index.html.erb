@@ -41,11 +41,7 @@
 
 
               <h2>Location</h2>
-                <select name="locations[]" multiple data-placeholder="<% unless params[:locations].nil? %>
-                      <% params[:locations].each do |location| %>
-                      <%= location%>,
-                    <% end %>
-                  <% end %>"
+                <select name="locations[]" multiple data-placeholder="<% unless params[:locations].nil? %><% empty = "" %><% params[:locations].each do |location| %><% empty +=location + ", "%><% end %><%= empty.lstrip %><% end %>"
                   multiple class="chosen-select">
                   <%= @no_duplicates_uni.each do |location| %>
                   <option value="<%= location %>"><%= location %></option>
