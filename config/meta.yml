@@ -1,0 +1,5 @@
+meta_product_name: "Wyder"
+meta_title: "Wyder - find the right university"
+meta_description: "High quality video content about universities in Germany to help you decide on the right subject to study."
+meta_image: "wyder.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
