@@ -10,19 +10,23 @@
       <%= "We found #{@programs.count} Universities that match your criteria." %>
     <% end %>
   </h5>
+
+
   <div class="row" style="padding-top: 45px;">
 
   <div class="flex">
     <%= form_tag programs_path, method: :get do %>
-          <div class="search">
+          <div class="search2">
             <div class="border-hover">
               <h2>Subject</h2>
               <%= text_field_tag :subject,
               params[:subject],
-              class: "form-control"%>
+              class: "subject form-control"%>
             </div>
             <div class="bottom-border">
             </div>
+
+
             <div class="border-hover">
               <h2>Degree</h2>
               <%= select_tag  :degree, options_for_select(["", "MSc", "BSc", "MA", "BA", "MLitt", "BLitt"], params[:degree]),
@@ -31,19 +35,33 @@
             </div>
             <div class="bottom-border">
             </div>
+
+
             <div class="border-hover">
+
+
               <h2>Location</h2>
-              <%= select_tag "location", options_from_collection_for_select(@universities, "location", "location", params[:location]), include_blank: true,
-              class: "form-control"
-                %>
+                <select name="locations[]" multiple data-placeholder="<% unless params[:locations].nil? %>
+                      <% params[:locations].each do |location| %>
+                      <%= location%>,
+                    <% end %>
+                  <% end %>"
+                  multiple class="chosen-select">
+                  <%= @no_duplicates_uni.each do |location| %>
+                  <option value="<%= location %>"><%= location %></option>
+                  <% end %>
+                </select>
             </div>
             <div class="bottom-border">
             </div>
+
+
           <div class="submit">
             <%= submit_tag "Update", class: "btn btn-info"%>
           </div>
           <% end %>
         </div>
+
 
           <div class="cards col-9">
             <%= render partial: "/shared/card", locals: { programs: @programs, program: @program } %>
