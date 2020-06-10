@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import chosen from 'chosen-js';
-import 'chosen-js/chosen.min.css';
+// import 'chosen-js/chosen.min.css';
 
 const initChosenjs = () => {
   $('.chosen-select').chosen().change((e) => {
