@@ -145,6 +145,10 @@ h1 {
   padding-bottom: 7px;
 }
 
+.btn-home {
+  max-width: 34px;
+}
+
 #first-description {
   text-align: left;
 }
@@ -168,7 +172,7 @@ h1 {
     overflow: hidden;
     margin: 0;
     padding: 0 5px;
-    width: 100%;
+    width: auto;
     height: auto;
     border: none !important;
     background-color: #fff;
