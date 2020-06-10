@@ -24,44 +24,18 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
+import { loadDynamicBannerQuestion } from '../components/question';
 import { loadDynamicBannerText } from '../components/banner';
+import { initChosenjs } from '../plugins/init_chosenjs';
+import 'chosen-js/chosen.min.css';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // initSelect2();
   if (document.querySelector('.headline') != undefined) {
     loadDynamicBannerText();
   }
-});
-
-import { loadDynamicBannerQuestion } from '../components/question';
-
-document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
   if (document.querySelector('.question') != undefined) {
     loadDynamicBannerQuestion();
   }
+  initChosenjs();
 });
-
-import { initSelect2 } from '../plugins/init_select2';
-
-// [...]
-initSelect2();
-
-import { initChosenjs } from '../plugins/init_chosenjs';
-import 'chosen-js/chosen.min.css';
-// [...]
-initChosenjs();
-
-
-// if (document.querySelector('.bookmark-container') != undefined) {
-//   document.querySelector('.bookmark-container').addEventListener('click',() => {
-//     document.querySelectorAll('.bookmark').forEach((bookmark) => {
-//       bookmark.classList.toggle('hidden')
-//     });
-//   });
-// };
