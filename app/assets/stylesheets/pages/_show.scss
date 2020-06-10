@@ -4,8 +4,8 @@
 }
 
 h2 {
-  padding: 21px;
-  text-align: center;
+  padding-top: 25px;
+  text-align: left;
 }
 
 .bookmark-container {
@@ -30,7 +30,7 @@ h2 {
   justify-content: space-around;
   padding: 30px;
   background-color: #FFF3EB;
-  margin: 40px;
+  margin: 40px 60px;
   border-radius: 40px;
 
   p {
@@ -47,6 +47,11 @@ h2 {
   display: flex;
   justify-content: space-around;
   padding-bottom: 70px;
+  margin: 10px 60px;
+}
+
+.question {
+  padding-top: 35px;
 }
 
 li {
@@ -54,15 +59,34 @@ li {
 }
 
 .video {
-  padding-top: 79px;
+  padding-top: 40px;
 }
 
 .quote {
   text-align: center;
   background-color: #FFF3EB;
-  margin: 40px;
+  margin: 40px 66px;
   border-radius: 40px;
   i {
     line-height: 2;
   }
+}
+
+.btn-apply {
+  color: white;
+  background-color: $dark-apricot;
+  height: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+  border:none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  i {
+    margin: 0 !important;
+  }
+  transition: ease all 0.8s;
+  text-decoration: none;
 }
