@@ -5,10 +5,14 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <!-- These 2 lines come from the LeWagon Meta-Tag-Setup -->
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= favicon_link_tag asset_path('favicon.png') %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
 
