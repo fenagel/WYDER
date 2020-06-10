@@ -27,7 +27,6 @@ import "bootstrap";
 import { loadDynamicBannerQuestion } from '../components/question';
 import { loadDynamicBannerText } from '../components/banner';
 import { initChosenjs } from '../plugins/init_chosenjs';
-import 'chosen-js/chosen.min.css';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
