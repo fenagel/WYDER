@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WYDER</title>
+    <title>
+      <%= content_for(:html_title) ? yield(:html_title) : "Wyder" %>
+    </title>
+    <!-- <title>WYDER</title> -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <!-- These 2 lines come from the LeWagon Meta-Tag-Setup -->
-    <title><%= meta_title %></title>
+    <!-- <title><%= meta_title %></title> -->
     <meta name="description" content="<%= meta_description %>">
 
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />

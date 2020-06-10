@@ -5,13 +5,13 @@ class BookmarksController < ApplicationController
     @bookmark.program = @program
     @bookmark.user = current_user
     @bookmark.save
-    redirect_to @program
+    redirect_to program_path(@program, anchor: "bookmark")
   end
 
   def destroy
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
-    redirect_to @program
+    redirect_to program_path(@program, anchor: "bookmark")
   end
 
   private

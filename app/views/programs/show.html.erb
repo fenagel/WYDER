@@ -1,7 +1,10 @@
+<% content_for(:html_title) { 'Great University - take a deeper view' } %>
+
+
 <div class="goback">
   <%= link_to "<< Back", programs_path %>
 </div>
-<div class="container">
+<div class="container" id="bookmark">
   <h1 id="headline"><%= @program.university.name %></h1>
   <div>
     <div class="row justify-content-center mb-2">
@@ -12,7 +15,7 @@
       <a class="btn-home" href="<%= @program.application_link %>" target="_blank">Apply now</a>
       <div class="bookmark-container">
         <% if @bookmark.id %>
-          <%= link_to program_bookmark_path(@program, @bookmark), method: :delete, remote: true do  %>
+          <%= link_to program_bookmark_path(@program, @bookmark), method: :delete, remote:true do  %>
           <svg class="bi bi-bookmark-fill bookmark" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" d="M3 3a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12l-5-3-5 3V3z"/>
           </svg>
