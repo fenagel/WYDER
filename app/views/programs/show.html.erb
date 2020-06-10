@@ -12,7 +12,7 @@
     </div>
     <div class="row justify-content-center mb-2">
       <h2><%= @program.name %></h2>
-      <a class="btn-home" href="<%= @program.application_link %>" target="_blank">Apply now</a>
+      <a class="btn-apply" href="<%= @program.application_link %>" target="_blank">Apply now</a>
       <div class="bookmark-container">
         <% if @bookmark.id %>
           <%= link_to program_bookmark_path(@program, @bookmark), method: :delete, remote:true do  %>
@@ -61,7 +61,7 @@
       <span id="banner-typed-question"></span>
     </h3>
     <h2 style="padding-bottom: 0; text-decoration: none;">What do you need to enroll?</h2>
-    <ol>
+    <ol style="padding-left: 28px;">
       <li style="color: #535050;">University entrance qualification (mostly Abitur)</li>
       <li style="color: #535050;">German language certificate</li>
       <li style="color: #535050;">Certificate of attendance of the orientation test</li>
@@ -82,7 +82,7 @@
   <br>
 </div>
 
-<div style="display: flex; justify-content: space-around; margin: 30px;">
+<div style="display: flex; justify-content: space-around; margin: 40px 60px">
   <div class="video">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kP_et05RvFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
   <div class="question" style="padding-left: 56px;padding-top: 20px;">
