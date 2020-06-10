@@ -1,6 +1,6 @@
 .filter-div {
   background-color: transparent;
-  margin-bottom: 40px;
+  margin-bottom: 5px;
 }
 
 #filter-text {
@@ -26,6 +26,7 @@
   text-align: center;
   margin-top: 50px;
   width: 600px;
+  border-radius: 20px;
 }
 
 
@@ -43,16 +44,21 @@
 }
 
 .top {
-  text-align: center;
+  text-align: left;
+  padding-left: 18px;
 }
 
 .bottom {
-  text-align: center;
+  text-align: left;
+  padding-left: 18px;
+  padding-bottom: 35px;
+  padding-top: 20px;
 }
 
 .all-videos {
   background-color: $seashell;
   margin-top: 20px;
+  border-radius: 15px;
 }
 
 .fas {
@@ -61,6 +67,11 @@
 
 .btn:hover{
   background-color: $dark-apricot;
+}
+
+.btn-filter:hover{
+  color: $dark-apricot;
+  text-decoration: none;
 }
 
 
@@ -72,4 +83,15 @@
   margin: 15px;
   color: $dark-grey;
   cursor: pointer;
+}
+
+.btn-filter {
+  background-color: white;
+  border: 2px solid $apricot;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 15px;
+  color: $dark-grey;
+  cursor: pointer;
+  font-size: 10px;
 }
