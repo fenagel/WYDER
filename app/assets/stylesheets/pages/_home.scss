@@ -166,6 +166,7 @@ h1 {
   padding-left: 6px !important;
   font-size: 1rem !important;
   padding-bottom: 4px;
+  width:100% !important;
 }
 
 .chosen-choices {
@@ -271,8 +272,8 @@ h1 {
   height:200px;
 }
 
-.instagram-media {
-  width:80%;
+.instagram-media .instagram-media-rendered {
+  max-width:300px !important;
   object-fit:contain;
 }
 
@@ -282,15 +283,26 @@ h1 {
 
 .grid {
   display:grid;
-  grid-template-columns:repeat(auto-fill, minmax(400px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(3,1fr);
+  grid-gap:16px;
 }
 
 @media (max-width: 992px) {
-  .first-description {
-    margin-top:50px;
+  #first-description {
+    margin-top:0px;
   }
   .animation {
-    margin-top:100px;
+    margin-top:57px;
   }
+  .js-text {
+    height:250px;
+  }
+  h1 {
+    font-size:60px;
+  }
+  .grid {
+  display:grid;
+  grid-template-columns:repeat(1,1fr);
+  grid-gap:16px;
+}
 }
