@@ -1,3 +1,4 @@
+<% content_for (:html_title), "#{@user.name} · Wyder" %>
 <div class="container">
 
         <!-- FILTERS DIV DROPDWONS -->
@@ -19,12 +20,12 @@
           <!-- Div for all the videos/filtered if click on buttons -->
             <div class="buttons">
               <div class="bottom">
-                <% if @bookmarked_programs.count == 1 %>
+                <% if @bookmarked_programs.count > 3 %>
                   <%= link_to @bookmarked_programs.first.subject.name, dashboards_path(subject_name: @bookmarked_programs.first.subject.name), class: "btn-filter"%>
                 <% end %>
 
-                <% if @bookmarked_programs.count == 1 %>
-                  <%= link_to @bookmarked_programs.first.university.location, dashboards_path(university_location: @bookmarked_programs.first.university.location), class: "btn-filter" %>
+                <% if @bookmarked_programs.count > 3 %>
+                  <%= link_to @bookmarked_programs.second.university.location, dashboards_path(university_location: @bookmarked_programs.second.university.location), class: "btn-filter" %>
                 <% end %>
 
                 <% if @bookmarked_programs.count > 4 && @bookmarked_programs.third.subject.name != @bookmarked_programs.first.subject.name %>
