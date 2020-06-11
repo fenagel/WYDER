@@ -12,7 +12,6 @@
     </div>
     <div class="row justify-content-center mb-2">
       <h2><%= @program.name %></h2>
-      <a class="btn-apply" href="<%= @program.application_link %>" target="_blank">Apply now</a>
       <div class="bookmark-container">
         <% if @bookmark.id %>
           <%= link_to program_bookmark_path(@program, @bookmark), method: :delete, remote:true do  %>
@@ -55,11 +54,11 @@
 </div>
 <div class="application">
   <div class="question">
-    <h1 id="h1">How to apply?</h1>
+    <h2 id="h1">How to apply?</h2>
     <hr>
-    <h3>
+    <h4>
       <span id="banner-typed-question"></span>
-    </h3>
+    </h4>
     <h2 style="padding-bottom: 0; text-decoration: none;">What do you need to enroll?</h2>
     <ol style="padding-left: 28px;">
       <li style="color: #535050;">University entrance qualification (mostly Abitur)</li>
@@ -67,6 +66,9 @@
       <li style="color: #535050;">Certificate of attendance of the orientation test</li>
       <li style="color: #535050;">Proof of very good English skills at the latest at the beginning of the semester</li>
     </ol>
+    <div class="applicationbutton">
+      <a class="btn-apply" href="<%= @program.application_link %>" target="_blank">Apply now</a>
+    </div>
   </div>
   <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/lu-1rw467OA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -82,15 +84,15 @@
   <br>
 </div>
 
-<div style="display: flex; justify-content: space-around; margin: 40px 60px">
+<div class="campus">
   <div class="video">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kP_et05RvFE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>  </div>
   <div class="question" style="padding-left: 56px;padding-top: 20px;">
-    <h1 id="h1">Mannheim Campus</h1>
+    <h2 id="h1">Mannheim Campus</h2>
     <hr>
     <p>The University of Mannheim (in German: Universität Mannheim), abbreviated UMA, is a public research university in Mannheim, Baden-Württemberg, Germany. Founded in 1967, the university has its origins in the Palatine Academy of Sciences, which was established by Elector Carl Theodor at Mannheim Palace in 1763, as well as the Handelshochschule (Commercial College Mannheim), which was founded in 1907.
 
-The university offers undergraduate and graduate programs in business administration, economics, law, social sciences, humanities, mathematics, computer science and information systems. The university's campus is located in the city center of Mannheim and its main campus is in the Mannheim Palace. In the academic year 2016/2017 the university had 12,000 full-time students, 907 academic staff, with 194 professors, and a total income of around €123 million. It is organized into five schools and two graduate colleges.</p>
+The university offers undergraduate and graduate programs in business administration, economics, law, social sciences, humanities, mathematics, computer science and information systems. In the academic year 2016/2017 the university had 12,000 full-time students, 907 academic staff, with 194 professors, and a total income of around €123 million. It is organized into five schools and two graduate colleges.</p>
   </div>
 </div>
 
