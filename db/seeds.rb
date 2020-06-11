@@ -70,7 +70,7 @@ user.programs << Program.find_by(name: "Law")
 
 
 user1 = User.create!(name: "Alex", email: "alex@example.com", password: "123456")
-uni1 = University.create!(name: "Westfälische Wilhelms-Universität Münster", location: "Baden-Württemberg", kind: :publicly_owned)
+uni1 = University.create!(name: "Westfälische Wilhelms-Universität Münster", location: "North Rhine-Westphalia", kind: :publicly_owned)
 uni1_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591348089/agar237kpclvgkrdwosk.jpg')
 uni1.photo.attach(io: uni1_image, filename: 'WWUM.jpg', content_type: 'image/jpg')
 user1.update(university: uni1)
@@ -876,4 +876,423 @@ user14.programs << Program.find_by(name: "Computer Science")
 user14.programs << Program.find_by(name: "Law")
 user14.programs << Program.find_by(name: "Medicine")
 user14.programs << Program.find_by(name: "Journalism")
+
+
+
+
+
+user15 = User.create!(name: "Alf", email: "alf@example.com", password: "123456")
+uni15 = University.create!(name: "FOM - Hochschule für Ökonomie und Management", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni15_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591862969/d1zfoxt93zc63l3atcow.jpg')
+uni15.photo.attach(io: uni15_image, filename: 'FOM-Essen.jpg', content_type: 'image/jpg')
+user15.update(university: uni15)
+uni15.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni15.programs.create!(
+  [
+    {
+      name: "Computer Science",
+      subject: Subject.find_by(name: "Computer Science"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/QofoXnRWtmA",
+      application_link: "https://www.fom.de/das-studium/anmeldung.html#!acc=hochschulbereich-wirtschaft-und-management",
+      description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Medicine",
+      subject: Subject.find_by(name: "Medicine"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/QofoXnRWtmA",
+      application_link: "https://www.fom.de/das-studium/anmeldung.html#!acc=hochschulbereich-wirtschaft-und-management",
+      description: "Medicine is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+{
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/QofoXnRWtmA",
+      application_link: "https://www.fom.de/das-studium/anmeldung.html#!acc=hochschulbereich-wirtschaft-und-management",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+{
+      name: "Law",
+      subject: Subject.find_by(name: "Law"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/QofoXnRWtmA",
+      application_link: "https://www.fom.de/das-studium/anmeldung.html#!acc=hochschulbereich-wirtschaft-und-management",
+      description: "Law is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+{
+      name: "Journalism",
+      subject: Subject.find_by(name: "Journalism"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/QofoXnRWtmA",
+      application_link: "https://www.fom.de/das-studium/anmeldung.html#!acc=hochschulbereich-wirtschaft-und-management",
+      description: "Journalism is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user15.programs << Program.find_by(name: "Business Administration")
+user15.programs << Program.find_by(name: "Computer Science")
+user15.programs << Program.find_by(name: "Law")
+user15.programs << Program.find_by(name: "Medicine")
+user15.programs << Program.find_by(name: "Journalism")
+
+
+
+
+user16 = User.create!(name: "Angie", email: "angie@example.com", password: "123456")
+uni16 = University.create!(name: "Johann Wolfgang Goethe-Universität Frankfurt am Main", location: "Hessen", kind: :publicly_owned)
+uni16_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591867753/p2s3qegzje3agbupohjd.jpg')
+uni16.photo.attach(io: uni16_image, filename: 'uni-frankfurt.jpg', content_type: 'image/jpg')
+user16.update(university: uni16)
+uni16.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni16.programs.create!(
+  [
+    {
+      name: "Computer Science",
+      subject: Subject.find_by(name: "Computer Science"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/7NZxQy4LaUk",
+      application_link: "https://www.uni-frankfurt.de/39329549/Information",
+      description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+     {
+      name: "Medicine",
+      subject: Subject.find_by(name: "Medicine"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/7NZxQy4LaUk",
+      application_link: "https://www.uni-frankfurt.de/39329549/Information",
+      description: "Medicine is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }, {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/7NZxQy4LaUk",
+      application_link: "https://www.uni-frankfurt.de/39329549/Information",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }, {
+      name: "Law",
+      subject: Subject.find_by(name: "Law"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/7NZxQy4LaUk",
+      application_link: "https://www.uni-frankfurt.de/39329549/Information",
+      description: "Law is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }, {
+      name: "Journalism",
+      subject: Subject.find_by(name: "Journalism"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/7NZxQy4LaUk",
+      application_link: "https://www.uni-frankfurt.de/39329549/Information",
+      description: "Journalism is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user16.programs << Program.find_by(name: "Business Administration")
+user16.programs << Program.find_by(name: "Computer Science")
+user16.programs << Program.find_by(name: "Law")
+user16.programs << Program.find_by(name: "Medicine")
+user16.programs << Program.find_by(name: "Journalism")
+
+
+
+user17 = User.create!(name: "Mani", email: "mani@example.com", password: "123456")
+uni17 = University.create!(name: "Rheinisch-Westfälische Technische Hochschule Aachen", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni17_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591868729/aevpexbrksscpf9lol57.jpg')
+uni17.photo.attach(io: uni17_image, filename: 'uni-aachen.jpg', content_type: 'image/jpg')
+user17.update(university: uni17)
+uni17.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni17.programs.create!(
+  [
+    {
+      name: "Computer Science",
+      subject: Subject.find_by(name: "Computer Science"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/UsePeuKAty0",
+      application_link: "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/",
+      description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Medicine",
+      subject: Subject.find_by(name: "Medicine"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/UsePeuKAty0",
+      application_link: "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/",
+      description: "Medicine is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/UsePeuKAty0",
+      application_link: "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/",
+      description: "CBusiness Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Law",
+      subject: Subject.find_by(name: "Law"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/UsePeuKAty0",
+      application_link: "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/",
+      description: "Law is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Journalism",
+      subject: Subject.find_by(name: "Journalism"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/UsePeuKAty0",
+      application_link: "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/",
+      description: "Journalism is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user17.programs << Program.find_by(name: "Business Administration")
+user17.programs << Program.find_by(name: "Computer Science")
+user17.programs << Program.find_by(name: "Law")
+user17.programs << Program.find_by(name: "Medicine")
+user17.programs << Program.find_by(name: "Journalism")
+
+
+
+
+user18 = User.create!(name: "Alfonso", email: "alfonso@example.com", password: "123456")
+uni18 = University.create!(name: "Ruhr-Universität Bochum", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni18_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591877880/ujvp8334xnzivf8bxd4l.jpg')
+uni18.photo.attach(io: uni18_image, filename: 'uni-aachen.jpg', content_type: 'image/jpg')
+user18.update(university: uni18)
+uni18.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni18.programs.create!(
+  [
+    {
+      name: "Computer Science",
+      subject: Subject.find_by(name: "Computer Science"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/qfmmgipsej0",
+      application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
+      description: "Computer Science is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Medicine",
+      subject: Subject.find_by(name: "Medicine"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/qfmmgipsej0",
+      application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
+      description: "Medicine is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/qfmmgipsej0",
+      application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Law",
+      subject: Subject.find_by(name: "Law"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/qfmmgipsej0",
+      application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
+      description: "Law is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    },
+    {
+      name: "Journalism",
+      subject: Subject.find_by(name: "Journalism"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/qfmmgipsej0",
+      application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
+      description: "Journalism is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user18.programs << Program.find_by(name: "Business Administration")
+user18.programs << Program.find_by(name: "Computer Science")
+user18.programs << Program.find_by(name: "Law")
+user18.programs << Program.find_by(name: "Medicine")
+user18.programs << Program.find_by(name: "Journalism")
+
+
+
+
+user19 = User.create!(name: "capo", email: "capo@example.com", password: "123456")
+uni19 = University.create!(name: "Heinrich-Heine-Universität Düsseldorf", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni19_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591873171/a42gywizemek6ryyri1a.jpg')
+uni19.photo.attach(io: uni19_image, filename: 'uni-duesseldorf.jpg', content_type: 'image/jpg')
+user19.update(university: uni19)
+uni19.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni19.programs.create!(
+  [
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/Ao_g49kTExc",
+      application_link: "https://www.uni-duesseldorf.de/home/studium-und-lehre-an-der-hhu/studium/studienplatzbewerbung/studienstart-bewerbungsverfahren-uebersicht.html",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user19.programs << Program.find_by(name: "Business Administration")
+
+
+user20 = User.create!(name: "jefe", email: "jefe@example.com", password: "123456")
+uni20 = University.create!(name: "Freie University Berlin", location: "Berlin", kind: :publicly_owned)
+uni20_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591878599/hutlvbldyrjricbvivlz.jpg')
+uni20.photo.attach(io: uni20_image, filename: 'freie-uni-berlin.jpg', content_type: 'image/jpg')
+user20.update(university: uni20)
+uni20.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni20.programs.create!(
+  [
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/X86SiAP36D0",
+      application_link: "https://www.fu-berlin.de/studium/bewerbung/index.html",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user20.programs << Program.find_by(name: "Business Administration")
+
+
+
+
+user21 = User.create!(name: "Ulf", email: "ulf@example.com", password: "123456")
+uni21 = University.create!(name: "Friedrich-Alexander-Universität Erlangen-Nürnberg", location: "Bavaria", kind: :publicly_owned)
+uni21_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591879392/bqqrf91zctgykdlagixf.jpg')
+uni21.photo.attach(io: uni21_image, filename: 'uni-nuernberg.jpg', content_type: 'image/jpg')
+user21.update(university: uni21)
+uni21.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni21.programs.create!(
+  [
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/llRsHzTIEfA",
+      application_link: "https://www.fau.de/education/bewerbung/",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user21.programs << Program.find_by(name: "Business Administration")
+
+
+
+
+user22 = User.create!(name: "Anton", email: "anton@example.com", password: "123456")
+uni22 = University.create!(name: "Universität Duisburg-Essen", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni22_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591879766/dttd7ssymkbxmabhknxt.jpg')
+uni22.photo.attach(io: uni22_image, filename: 'uni-essen.jpg', content_type: 'image/jpg')
+user22.update(university: uni22)
+uni22.subjects.create!(
+  [
+    {name: "Computer Science"},
+    {name: "Medicine"},
+    {name: "Business Administration"},
+    {name: "Law"},
+    {name: "Journalism"}
+  ]
+)
+uni22.programs.create!(
+  [
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :MSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/07lcK3AaFbQ",
+      application_link: "https://www.uni-due.de/de/studium/bewerbung.php",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+
+user22.programs << Program.find_by(name: "Business Administration")
 
