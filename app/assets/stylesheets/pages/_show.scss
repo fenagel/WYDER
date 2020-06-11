@@ -4,14 +4,15 @@
 }
 
 h2 {
-  padding-top: 25px;
+  padding-top: 10px;
   text-align: left;
 }
 
 .bookmark-container {
   position: relative;
   svg {
-    margin-top: 17px;
+    margin-top: 5px;
+    padding-left: 12px;
   }
   svg.hidden {
     display: none;
@@ -48,10 +49,11 @@ h2 {
   justify-content: space-around;
   padding-bottom: 70px;
   margin: 10px 60px;
+  padding-top: 20px;
 }
 
 .question {
-  padding-top: 35px;
+  padding-top: 25px;
 }
 
 li {
@@ -93,4 +95,16 @@ li {
   max-width: 100px;
   max-height: 50px;
   text-decoration: none;
+}
+
+.applicationbutton {
+  text-align: center;
+  padding-right: 65px;
+  padding-top: 15px;
+}
+
+.campus {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 60px
 }
