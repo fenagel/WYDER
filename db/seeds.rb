@@ -70,7 +70,7 @@ user.programs << Program.find_by(name: "Law")
 
 
 user1 = User.create!(name: "Alex", email: "alex@example.com", password: "123456")
-uni1 = University.create!(name: "Westfälische Wilhelms-Universität Münster", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni1 = University.create!(name: "Wilhelms-Universität Münster", location: "North Rhine-Westphalia", kind: :publicly_owned)
 uni1_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591348089/agar237kpclvgkrdwosk.jpg')
 uni1.photo.attach(io: uni1_image, filename: 'WWUM.jpg', content_type: 'image/jpg')
 user1.update(university: uni1)
@@ -149,7 +149,7 @@ user2.programs << Program.find_by(name: "Business Administration")
 
 
 user3 = User.create!(name: "Lea", email: "lea@example.com", password: "123456")
-uni3 = University.create!(name: "WHU Otto Beisheim School of Management", location: "Rhineland-Palatinate", kind: :privately_owned)
+uni3 = University.create!(name: "WHU - School of Management", location: "Rhineland-Palatinate", kind: :privately_owned)
 uni3_image = URI.open('http://res.cloudinary.com/dvt0t51oq/image/upload/v1591717532/mvrdx5vaivwrnim1ifvg.jpg')
 uni3.photo.attach(io: uni3_image, filename: 'whu.jpg', content_type: 'image/jpg')
 user3.update(university: uni3)
@@ -882,7 +882,7 @@ user14.programs << Program.find_by(name: "Journalism")
 
 
 user15 = User.create!(name: "Alf", email: "alf@example.com", password: "123456")
-uni15 = University.create!(name: "FOM - Hochschule für Ökonomie und Management", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni15 = University.create!(name: "Hochschule für Management", location: "North Rhine-Westphalia", kind: :publicly_owned)
 uni15_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591862969/d1zfoxt93zc63l3atcow.jpg')
 uni15.photo.attach(io: uni15_image, filename: 'FOM-Essen.jpg', content_type: 'image/jpg')
 user15.update(university: uni15)
@@ -955,7 +955,7 @@ user15.programs << Program.find_by(name: "Journalism")
 
 
 user16 = User.create!(name: "Angie", email: "angie@example.com", password: "123456")
-uni16 = University.create!(name: "Johann Wolfgang Goethe-Universität Frankfurt am Main", location: "Hessen", kind: :publicly_owned)
+uni16 = University.create!(name: "Universität Frankfurt a. M.", location: "Hessen", kind: :publicly_owned)
 uni16_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591867753/p2s3qegzje3agbupohjd.jpg')
 uni16.photo.attach(io: uni16_image, filename: 'uni-frankfurt.jpg', content_type: 'image/jpg')
 user16.update(university: uni16)
@@ -1024,7 +1024,7 @@ user16.programs << Program.find_by(name: "Journalism")
 
 
 user17 = User.create!(name: "Mani", email: "mani@example.com", password: "123456")
-uni17 = University.create!(name: "Rheinisch-Westfälische Technische Hochschule Aachen", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni17 = University.create!(name: "Technische Hochschule Aachen", location: "North Rhine-Westphalia", kind: :publicly_owned)
 uni17_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591868729/aevpexbrksscpf9lol57.jpg')
 uni17.photo.attach(io: uni17_image, filename: 'uni-aachen.jpg', content_type: 'image/jpg')
 user17.update(university: uni17)
@@ -1170,7 +1170,7 @@ user18.programs << Program.find_by(name: "Journalism")
 
 
 user19 = User.create!(name: "capo", email: "capo@example.com", password: "123456")
-uni19 = University.create!(name: "Heinrich-Heine-Universität Düsseldorf", location: "North Rhine-Westphalia", kind: :publicly_owned)
+uni19 = University.create!(name: "Universität Düsseldorf", location: "North Rhine-Westphalia", kind: :publicly_owned)
 uni19_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591873171/a42gywizemek6ryyri1a.jpg')
 uni19.photo.attach(io: uni19_image, filename: 'uni-duesseldorf.jpg', content_type: 'image/jpg')
 user19.update(university: uni19)
@@ -1234,7 +1234,7 @@ user20.programs << Program.find_by(name: "Business Administration")
 
 
 user21 = User.create!(name: "Ulf", email: "ulf@example.com", password: "123456")
-uni21 = University.create!(name: "Friedrich-Alexander-Universität Erlangen-Nürnberg", location: "Bavaria", kind: :publicly_owned)
+uni21 = University.create!(name: "Universität Nürnberg", location: "Bavaria", kind: :publicly_owned)
 uni21_image = URI.open('https://res.cloudinary.com/dvt0t51oq/image/upload/v1591879392/bqqrf91zctgykdlagixf.jpg')
 uni21.photo.attach(io: uni21_image, filename: 'uni-nuernberg.jpg', content_type: 'image/jpg')
 user21.update(university: uni21)
