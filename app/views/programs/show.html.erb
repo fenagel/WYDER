@@ -5,10 +5,10 @@
   <%= link_to "<< Back", programs_path %>
 </div>
 <div class="container" id="bookmark">
-  <h1 id="headline"><%= @program.university.name %></h1>
+  <h2 id="headline"><%= @program.university.name %></h2>
   <div>
     <div class="row justify-content-center mb-2">
-      <iframe class="iframe" width="600" height="355" src="<%= @program.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="iframe" width="8000" height="400" src="<%= @program.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div class="row justify-content-center mb-2">
       <h2><%= @program.name %></h2>

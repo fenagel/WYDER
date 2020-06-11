@@ -13,6 +13,8 @@
     color: black;
     letter-spacing: 1px;
   }
+  position: sticky;
+  top: 50px;
 }
 
 .flex {
@@ -41,6 +43,52 @@
   color: grey !important;
 }
 
-.btn {
-  width: 80%;
+.btn-update {
+  max-width: 190px;
+  color: white;
+  background-color: $dark-apricot;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+  border:none;
+  cursor: pointer;
+  transition: ease all 0.8s;
+  text-decoration: none;
+  max-height: 43px;
+}
+
+.btn-update:hover {
+  color: $dark-apricot;
+  border: solid 1px $apricot;
+  background-color: transparent;
+  max-width: 190px;
+  max-height: 43px;
+}
+
+.question {
+  padding-top: 68px;
+}
+
+.container {
+  h1 {
+    padding-top: 60px;
+  }
+}
+
+.counter {
+  h6 {
+    font: bold;
+  }
+  border-width: 1px;
+  border-style: solid;
+  border-color: $apricot;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+#search {
+  position: sticky;
+  top: 100px;
+  padding-top: 45px;
 }

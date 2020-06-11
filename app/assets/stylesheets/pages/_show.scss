@@ -73,20 +73,24 @@ li {
 }
 
 .btn-apply {
+  max-width: 100px;
   color: white;
   background-color: $dark-apricot;
-  height: 100%;
   border-radius: 20px;
   padding: 10px;
   margin: 20px;
   border:none;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  i {
-    margin: 0 !important;
-  }
   transition: ease all 0.8s;
+  text-decoration: none;
+  max-height: 50px;
+}
+
+.btn-apply:hover {
+  color: $dark-apricot;
+  border: solid 1px $apricot;
+  background-color: transparent;
+  max-width: 100px;
+  max-height: 50px;
   text-decoration: none;
 }
