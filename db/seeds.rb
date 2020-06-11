@@ -990,7 +990,7 @@ uni16.programs.create!(
     }, {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/7NZxQy4LaUk",
       application_link: "https://www.uni-frankfurt.de/39329549/Information",
@@ -1060,7 +1060,7 @@ uni17.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/UsePeuKAty0",
       application_link: "https://www.rwth-aachen.de/cms/root/Studium/Vor-dem-Studium/~ege/Zugangsvoraussetzungen/",
@@ -1133,7 +1133,7 @@ uni18.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/qfmmgipsej0",
       application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
@@ -1151,7 +1151,7 @@ uni18.programs.create!(
     {
       name: "Journalism",
       subject: Subject.find_by(name: "Journalism"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/qfmmgipsej0",
       application_link: "https://studium.ruhr-uni-bochum.de/de/bewerbung",
@@ -1188,7 +1188,7 @@ uni19.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/Ao_g49kTExc",
       application_link: "https://www.uni-duesseldorf.de/home/studium-und-lehre-an-der-hhu/studium/studienplatzbewerbung/studienstart-bewerbungsverfahren-uebersicht.html",
@@ -1219,7 +1219,7 @@ uni20.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/X86SiAP36D0",
       application_link: "https://www.fu-berlin.de/studium/bewerbung/index.html",
@@ -1252,7 +1252,7 @@ uni21.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/llRsHzTIEfA",
       application_link: "https://www.fau.de/education/bewerbung/",
@@ -1285,7 +1285,7 @@ uni22.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/07lcK3AaFbQ",
       application_link: "https://www.uni-due.de/de/studium/bewerbung.php",
@@ -1298,6 +1298,32 @@ user22.programs << Program.find_by(name: "Business Administration")
 
 
 
+user100 = User.create!(name: "Gustavo", email: "gustavo@example.com", password: "123456")
+uni100 = University.create!(name: "University Stuttgart", location: "Baden-Württemberg", kind: :publicly_owned)
+uni100_image = URI.open('http://res.cloudinary.com/dvt0t51oq/image/upload/v1591889235/i3x4og2l9xaj8svuq5hn.jpg')
+uni100.photo.attach(io: uni100_image, filename: 'uni-stuttgart.jpg', content_type: 'image/jpg')
+user100.update(university: uni100)
+uni100.subjects.create!(
+  [
+
+    {name: "Business Administration"}
+
+  ]
+)
+uni100.programs.create!(
+  [
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :BSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/kgaELc5zrHs",
+      application_link: "https://www.uni-stuttgart.de/studium/bewerbung/online/",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+user100.programs << Program.find_by(name: "Business Administration")
 
 
 
@@ -1322,7 +1348,7 @@ uni23.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/IGAzGWQtwX4",
       application_link: "https://www.studienberatung.uni-bayreuth.de/de/beratung-und-service/index.html",
@@ -1330,8 +1356,36 @@ uni23.programs.create!(
     }
   ]
 )
-
 user23.programs << Program.find_by(name: "Business Administration")
+
+
+
+user101 = User.create!(name: "Geronimo", email: "geronimo@example.com", password: "123456")
+uni101 = University.create!(name: "University Reutlingen", location: "Baden-Württemberg", kind: :publicly_owned)
+uni101_image = URI.open('http://res.cloudinary.com/dvt0t51oq/image/upload/v1591889913/qpovtlatop1hkichntmj.jpg')
+uni101.photo.attach(io: uni101_image, filename: 'uni-reutlingen.jpg', content_type: 'image/jpg')
+user101.update(university: uni101)
+uni101.subjects.create!(
+  [
+    {name: "Business Administration"}
+  ]
+)
+uni101.programs.create!(
+   [
+     {
+       name: "Business Administration",
+       subject: Subject.find_by(name: "Business Administration"),
+       degree: :BSc,
+       fee: 800,
+       video_url: "https://www.youtube.com/embed/V0lKE-mnFoU",
+       application_link: "https://hisinone.reutlingen-university.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces?chco=y",
+       description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+     }    
+    ]
+  )
+ user101.programs << Program.find_by(name: "Business Administration")    
+
+
 
 
 
@@ -1354,7 +1408,7 @@ uni24.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/oCppev5Dcuw",
       application_link: "https://www.uni-regensburg.de/studium/studentenkanzlei/bewerbung-einschreibung/bewerbung/index.html",
@@ -1389,7 +1443,7 @@ uni25.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/DLOjlBvARG8",
       application_link: "https://www.uni-augsburg.de/de/studium/bewerbung/bewerbung/",
@@ -1397,10 +1451,36 @@ uni25.programs.create!(
     }
   ]
 )
-
 user25.programs << Program.find_by(name: "Business Administration")
 
 
+
+user102 = User.create!(name: "Gilberto", email: "gilberto@example.com", password: "123456")
+uni102 = University.create!(name: "University Hohenheim", location: "Baden-Württemberg", kind: :publicly_owned)
+uni102_image = URI.open('http://res.cloudinary.com/dvt0t51oq/image/upload/v1591890247/d4nsimsbd0uuxku7nao2.jpg')
+uni102.photo.attach(io: uni102_image, filename: 'uni-hohenheim.jpg', content_type: 'image/jpg')
+user102.update(university: uni102)
+uni102.subjects.create!(
+  [
+
+    {name: "Business Administration"}
+
+  ]
+)
+uni102.programs.create!(
+  [
+    {
+      name: "Business Administration",
+      subject: Subject.find_by(name: "Business Administration"),
+      degree: :BSc,
+      fee: 800,
+      video_url: "https://www.youtube.com/embed/CFXTNUGMm7Q",
+      application_link: "https://hohcampus.verw.uni-hohenheim.de/qisserver/pages/cs/sys/portal/hisinoneStartPage.faces?page=Bewerber/-innen",
+      description: "Business Administration is a rapidly developing field that brings together applied mathematics (especially numerical analysis), computer science, and scientific or engineering applications. CSE focuses on developing problem-solving methodologies and robust tools for numerical simulation. To understand phenomena and processes from science and engineering, we no longer need to depend only on theory and experiment, but can also use computations. Numerical simulations supplement experiments and can even allow the examination of systems and problems that would be too time-consuming, expensive, or dangerous (if possible at all) to study by experiment alone."
+    }
+  ]
+)
+user102.programs << Program.find_by(name: "Business Administration")
 
 
 user26 = User.create!(name: "Papa", email: "papa@example.com", password: "123456")
@@ -1422,7 +1502,7 @@ uni26.programs.create!(
     {
       name: "Business Administration",
       subject: Subject.find_by(name: "Business Administration"),
-      degree: :MSc,
+      degree: :BSc,
       fee: 800,
       video_url: "https://www.youtube.com/embed/j9z1KUQdbZQ",
       application_link: "https://www.hs-coburg.de/studium/bewerben-und-einschreiben.html",
@@ -1430,7 +1510,4 @@ uni26.programs.create!(
     }
   ]
 )
-
 user26.programs << Program.find_by(name: "Business Administration")
-
-
