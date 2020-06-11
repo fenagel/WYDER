@@ -72,6 +72,7 @@
 
  .animation {
   padding-right: 50px;
+  margin-top: 57px;
  }
 
  .container2 {
@@ -98,6 +99,7 @@
   border: 2px solid #FFCEAD;
   justify-content:space-between;
   align-items: flex-end;
+  z-index: 12;
   box-shadow:0px 4px 8px rgba(0, 0, 0, 0.08);
   h2 {
     font-size:14px;
@@ -160,7 +162,6 @@ h1 {
 }
 
 .chosen-container {
-  width:400px !important;
   padding-top: 7px !important;
   padding-left: 6px !important;
   font-size: 1rem !important;
@@ -239,6 +240,7 @@ h1 {
   cursor: pointer !important;
   box-shadow:0px 4px 8px rgba(0, 0, 0, 0.08);
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .articles > img {
@@ -271,9 +273,24 @@ h1 {
 
 .instagram-media {
   width:80%;
-  height:600px;
+  object-fit:contain;
 }
 
 .js-text {
   height:300px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(400px,1fr));
+  gap:20px;
+}
+
+@media (max-width: 992px) {
+  .first-description {
+    margin-top:50px;
+  }
+  .animation {
+    margin-top:100px;
+  }
 }
