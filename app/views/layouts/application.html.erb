@@ -2,11 +2,19 @@
 <html>
   <head>
     <title>
-      <%= content_for(:html_title) ? yield(:html_title) : "Wyder" %>
+      <%= content_for(:html_title) ? yield(:html_title) : "Wyder - Stop Searching. Start Finding." %>
     </title>
     <!-- <title>WYDER</title> -->
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
 
     <!-- These 2 lines come from the LeWagon Meta-Tag-Setup -->
     <!-- <title><%= meta_title %></title> -->
