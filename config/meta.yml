@@ -1,5 +1,6 @@
 meta_product_name: "Wyder"
 meta_title: "Wyder - stop searching, start finding"
 meta_description: "High quality and informative video platform for important life decisions"
-meta_image: "wyder.png" # should exist in `app/assets/images/`
+meta_image: "http://res.cloudinary.com/dvt0t51oq/image/upload/v1591950831/trb3hmwbtu4lyer0ymc1.jpg"
+# should exist in `app/assets/images/`
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
