@@ -2,4 +2,6 @@ meta_product_name: "Wyder"
 meta_title: "Wyder - stop searching, start finding"
 meta_description: "High quality and informative video platform for important life decisions"
 meta_image: "wyder.png" # should exist in `app/assets/images/`
+meta_url: "wyder.xyz"
+meta_type: "website"
 # twitter_account: "@product_twitter_account"   # required for Twitter Cards
